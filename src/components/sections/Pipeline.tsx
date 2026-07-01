@@ -119,7 +119,7 @@ export function Pipeline() {
             </p>
           </div>
           <a
-            href="mailto:invest@nexogenholdings.com"
+            href="mailto:arthur@nexxogenn.com?subject=Enquiry%20from%20Nexogen%20Holdings%20website"
             className="font-body shrink-0 rounded-full bg-[#2D7DD2] px-8 py-3.5 text-sm text-white transition-shadow hover:shadow-[0_0_30px_rgba(45,125,210,0.35)]"
             data-cursor-label="Contact"
           >

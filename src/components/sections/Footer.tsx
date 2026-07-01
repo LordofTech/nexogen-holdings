@@ -17,7 +17,7 @@ export function Footer() {
         </p>
         <div className="mt-10 flex flex-wrap justify-center gap-4">
           <a
-            href="mailto:info@nexogenholdings.com"
+            href="mailto:arthur@nexxogenn.com?subject=Enquiry%20from%20Nexogen%20Holdings%20website"
             className="font-body flex h-[52px] items-center rounded-full bg-[#2D7DD2] px-8 text-sm text-white"
             data-cursor-label="Contact"
           >
@@ -32,11 +32,11 @@ export function Footer() {
           </a>
         </div>
         <div className="font-mono mt-16 flex flex-wrap justify-center gap-8 text-xs text-[#8899AA]">
-          <a href="mailto:info@nexogenholdings.com" className="hover:text-white">
-            info@nexogenholdings.com
-          </a>
-          <a href="mailto:invest@nexogenholdings.com" className="hover:text-white">
-            invest@nexogenholdings.com
+          <a
+            href="mailto:arthur@nexxogenn.com?subject=Enquiry%20from%20Nexogen%20Holdings%20website"
+            className="hover:text-white"
+          >
+            arthur@nexxogenn.com
           </a>
           <span>Lagos, Nigeria</span>
         </div>
