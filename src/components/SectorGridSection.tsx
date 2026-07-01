@@ -8,7 +8,7 @@ const sectors = [
     title: "Fintech",
     status: "Active",
     statusColor: "#00FFFF",
-    description: "Full global TRVRSE visualization — AI-optimized transactions at planetary scale.",
+    description: "Full global TRVRSE visualization — optimized transactions at planetary scale.",
     visual: "fintech",
   },
   {

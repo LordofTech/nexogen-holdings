@@ -13,7 +13,7 @@ export function Footer() {
               Nexogen Holdings Limited
             </p>
             <p className="text-xs text-[#C0C0C0]">
-              Architecting the Intelligent Future
+              Architecting the Future
             </p>
           </div>
         </div>

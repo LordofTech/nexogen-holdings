@@ -32,37 +32,28 @@ export function HeroSection() {
           />
 
           <div className="relative flex h-28 w-28 items-center justify-center rounded-full bg-gradient-to-br from-[#00FFFF]/20 to-[#00BFFF]/10 border border-[#00FFFF]/40 shadow-[0_0_60px_rgba(0,255,255,0.3)] animate-pulse-glow">
-            <span className="text-4xl font-extrabold tracking-tighter kinetic-gradient">AI</span>
+            <NexogenLogo size={56} />
           </div>
-        </motion.div>
-
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
-          className="mb-6 flex justify-center"
-        >
-          <NexogenLogo size={48} className="opacity-60" />
         </motion.div>
 
         <motion.h1
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.6 }}
+          transition={{ duration: 0.8, delay: 0.5 }}
           className="mb-6 text-3xl font-extrabold leading-tight tracking-tight text-white sm:text-5xl lg:text-6xl xl:text-7xl"
         >
           NEXOGEN HOLDINGS LIMITED:
           <br />
-          <span className="kinetic-gradient">ARCHITECTING THE INTELLIGENT FUTURE.</span>
+          <span className="kinetic-gradient">ARCHITECTING THE FUTURE.</span>
         </motion.h1>
 
         <motion.p
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.9 }}
+          transition={{ duration: 0.8, delay: 0.8 }}
           className="text-lg font-medium tracking-[0.3em] text-[#00FFFF] uppercase sm:text-xl glow-text-cyan"
         >
-          The AI-Driven Venture Studio
+          A Multi-Sector Venture Studio
         </motion.p>
 
         <motion.div

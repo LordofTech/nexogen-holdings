@@ -6,8 +6,8 @@ import { ParticleCanvas } from "./ParticleCanvas";
 const hubs = [
   {
     id: 1,
-    title: "Ideation & AI Optimization",
-    description: "Wireframes pulsing with conceptual data models, refined by machine intelligence.",
+    title: "Ideation & Strategy",
+    description: "Wireframes pulsing with conceptual data models, refined through research and iteration.",
     icon: "ideation",
   },
   {
@@ -53,7 +53,7 @@ function HubIcon({ type }: { type: string }) {
         <text x="8" y="44" fill="#00FFFF" fontSize="8" opacity="0.7">{"</>"}</text>
         <text x="40" y="28" fill="#00FFFF" fontSize="7" opacity="0.5">fn()</text>
         <text x="40" y="40" fill="#00BFFF" fontSize="7" opacity="0.5">=&gt;</text>
-        <text x="40" y="52" fill="#00FFFF" fontSize="7" opacity="0.5">AI</text>
+        <text x="40" y="52" fill="#00FFFF" fontSize="7" opacity="0.5">run</text>
         <rect x="55" y="15" width="20" height="50" fill="none" stroke="#2C3539" strokeWidth="1" />
         <line x1="55" y1="25" x2="75" y2="25" stroke="#00FFFF" strokeWidth="0.5" opacity="0.4" />
         <line x1="55" y1="35" x2="75" y2="35" stroke="#00BFFF" strokeWidth="0.5" opacity="0.4" />

@@ -9,13 +9,13 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Nexogen Holdings Limited | Architecting the Intelligent Future",
+  title: "Nexogen Holdings Limited | Architecting the Future",
   description:
-    "The AI-Driven Venture Studio. Flagship innovation TRVRSE — AI-optimized transactions, secured infrastructure, and multi-sector scalability.",
+    "A multi-sector venture studio. Flagship innovation TRVRSE — optimized transactions, secured infrastructure, and global scalability.",
   keywords: [
     "Nexogen Holdings",
     "TRVRSE",
-    "AI Venture Studio",
+    "Venture Studio",
     "Fintech",
     "GovTech",
     "EdTech",

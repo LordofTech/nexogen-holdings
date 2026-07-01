@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { ParticleCanvas } from "./ParticleCanvas";
 
 const features = [
-  "AI-Optimized Transactions",
+  "Optimized Transactions",
   "Secured Infrastructure",
   "Global Payment Transactions",
   "Real-Time Data Visualization",
@@ -72,7 +72,7 @@ function PhoneMockup() {
             <div className="space-y-2">
               {[
                 { label: "Global Transfer", amount: "-$1,240.00", status: "Completed" },
-                { label: "AI Optimization", amount: "+$340.20", status: "Active" },
+                { label: "Yield Optimization", amount: "+$340.20", status: "Active" },
               ].map((tx) => (
                 <div
                   key={tx.label}
