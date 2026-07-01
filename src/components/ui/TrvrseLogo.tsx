@@ -9,15 +9,30 @@ export function TrvrseLogo({
 }: {
   className?: string;
   size?: number;
-  variant?: "mark" | "lockup";
+  variant?: "mark" | "lockup" | "png";
   blend?: boolean;
 }) {
-  const src =
-    variant === "lockup"
-      ? "/branding/trvrse-horizontal-lockup.svg"
-      : "/branding/trvrse-logomark.svg";
+  const usePng = variant === "png" || variant === "mark";
 
-  const width = variant === "lockup" ? size * 3.2 : size;
+  if (usePng) {
+    return (
+      <Image
+        src="/assets/trvrse-logomark.png"
+        alt="Trvrse"
+        width={size}
+        height={size}
+        className={cn(
+          "object-contain",
+          blend && "mix-blend-lighten",
+          className
+        )}
+        priority={false}
+      />
+    );
+  }
+
+  const src = "/branding/trvrse-horizontal-lockup.svg";
+  const width = size * 3.2;
   const height = size;
 
   return (
@@ -26,11 +41,7 @@ export function TrvrseLogo({
       alt="Trvrse"
       width={width}
       height={height}
-      className={cn(
-        "object-contain",
-        blend && "opacity-95 mix-blend-screen saturate-150",
-        className
-      )}
+      className={cn("object-contain", className)}
       priority={false}
     />
   );

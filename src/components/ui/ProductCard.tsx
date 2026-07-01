@@ -75,14 +75,7 @@ export function ProductCard({
       </div>
 
       <div className="relative z-10 max-w-xl">
-        {product.id === "trvrse" ? (
-          <div className="flex flex-col gap-3">
-            <TrvrseLogo size={72} blend className="max-w-[200px]" />
-            <span className="font-display sr-only">Trvrse</span>
-          </div>
-        ) : (
-          <h3 className="font-display text-4xl font-bold text-white md:text-6xl">{product.name}</h3>
-        )}
+        <h3 className="font-display text-4xl font-bold text-white md:text-6xl">{product.name}</h3>
         <p className="font-body mt-3 text-base text-[#8899AA]">{product.subtitle}</p>
         {product.description && (
           <p className="font-body mt-4 max-w-md text-sm text-[#8899AA]/80">{product.description}</p>

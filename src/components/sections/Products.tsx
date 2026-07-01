@@ -8,7 +8,7 @@ import { cn } from "@/lib/utils";
 const products: ProductData[] = [
   {
     id: "trvrse",
-    name: "Trvrse",
+    name: "tRVRSE",
     subtitle: "Cross-Border Fintech Wallet",
     status: "live",
     bg: "linear-gradient(135deg, #0A1628 0%, #0d1f3c 50%, #0A1628 100%)",
@@ -16,7 +16,7 @@ const products: ProductData[] = [
     chips: ["80+ Countries", "Live FX Rates", "Virtual Cards"],
     link: "#contact",
     phone: true,
-    icon: <TrvrseLogo size={48} blend />,
+    icon: <TrvrseLogo size={44} blend />,
   },
   {
     id: "edunova",
@@ -141,9 +141,6 @@ export function Products() {
         <h2 className="font-display mt-3 text-4xl font-bold text-white md:text-5xl">
           What we build
         </h2>
-        <p className="font-body mt-3 text-sm text-[#8899AA]">
-          Scroll horizontally to explore — vertical scroll is not interrupted.
-        </p>
       </div>
 
       <div className="relative">
