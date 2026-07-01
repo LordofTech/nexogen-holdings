@@ -29,5 +29,6 @@ Do this at the end of every task that modifies project files — do not leave ch
 
 ## Remote
 
-- GitHub: `origin` → `LordofTech/nexogen-holdings`
-- Production URL is managed by Vercel (check `vercel.json` or the Vercel dashboard if needed).
+- **GitHub:** https://github.com/LordofTech/nexogen-holdings (`origin` → `main`)
+- **Vercel production:** https://nexogen-holdings.vercel.app
+- **Vercel dashboard:** https://vercel.com/arthur-6246s-projects/nexogen-holdings
