@@ -1,0 +1,33 @@
+---
+description: After any local code change, commit and push to GitHub so Vercel auto-deploys
+alwaysApply: true
+---
+
+# Auto Push & Deploy
+
+This workspace is connected to **GitHub** and **Vercel**. Every code change must be synced to both.
+
+## Required workflow after making changes
+
+1. **Commit** all relevant changes with a clear, concise message.
+2. **Push** to the `main` branch on GitHub (`git push origin main`).
+3. **Confirm** the push succeeded (`git status` should show clean and up to date).
+
+Do this at the end of every task that modifies project files — do not leave changes only on disk.
+
+## Vercel deployment
+
+- Vercel is linked to this repo and deploys automatically on every push to `main`.
+- Do **not** run `npx convex deploy` or production deploy commands unless the user explicitly asks.
+- For this Next.js site, pushing to GitHub is sufficient; Vercel handles the build and deploy.
+
+## Git safety
+
+- Never force-push to `main`.
+- Never commit `.env`, `.env.local`, or files containing secrets.
+- Only create commits when there are actual changes to commit.
+
+## Remote
+
+- GitHub: `origin` → `LordofTech/nexogen-holdings`
+- Production URL is managed by Vercel (check `vercel.json` or the Vercel dashboard if needed).
