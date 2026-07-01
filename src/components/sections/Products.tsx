@@ -10,6 +10,7 @@ const products: ProductData[] = [
     id: "trvrse",
     name: "Trvrse",
     subtitle: "Cross-Border Fintech Wallet",
+    description: "Direct international transfers — instant and seamless.",
     status: "live",
     bg: "linear-gradient(135deg, #0A1628 0%, #0d1f3c 50%, #0A1628 100%)",
     accent: "#2D7DD2",
