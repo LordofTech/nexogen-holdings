@@ -4,6 +4,7 @@ import dynamic from "next/dynamic";
 import { useEffect, useRef, useState } from "react";
 import { motion, useInView } from "framer-motion";
 import { TextReveal } from "@/components/ui/TextReveal";
+import { ViewportMount } from "@/components/ui/ViewportMount";
 
 const AboutOrb = dynamic(
   () => import("@/components/three/AboutOrb").then((m) => m.AboutOrb),
@@ -98,7 +99,9 @@ We are builders. We ship. We scale. We repeat.`}
             if (panelRef.current) panelRef.current.style.transform = "translate(0, 0)";
           }}
         >
-          <AboutOrb />
+          <ViewportMount minHeight={400} fallback={<div className="min-h-[400px]" />}>
+            <AboutOrb />
+          </ViewportMount>
         </div>
       </div>
     </section>

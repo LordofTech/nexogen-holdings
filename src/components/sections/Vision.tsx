@@ -1,114 +1,79 @@
 "use client";
 
-import { useEffect, useRef } from "react";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useRef } from "react";
+import { motion, useInView } from "framer-motion";
 import { prefersReducedMotion } from "@/lib/utils";
 
-gsap.registerPlugin(ScrollTrigger);
-
 const sequence = [
-  { text: "Africa", pause: true },
-  { text: "has always been", pause: false },
-  { text: "the future.", pause: true, hold: true },
-  { text: "We are building", pause: false },
-  { text: "the infrastructure", pause: false },
-  { text: "that proves it.", pause: true },
+  "Africa",
+  "has always been",
+  "the future.",
+  "We are building",
+  "the infrastructure",
+  "that proves it.",
 ];
 
 export function Vision() {
-  const sectionRef = useRef<HTMLElement>(null);
-  const wordsRef = useRef<HTMLDivElement>(null);
-  const lineRef = useRef<HTMLDivElement>(null);
-  const sigRef = useRef<HTMLParagraphElement>(null);
-
-  useEffect(() => {
-    if (prefersReducedMotion() || !sectionRef.current || !wordsRef.current) return;
-
-    const words = wordsRef.current.querySelectorAll("[data-word]");
-    const tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: sectionRef.current,
-        start: "top top",
-        end: "+=300%",
-        pin: true,
-        scrub: 1,
-      },
-    });
-
-    words.forEach((word, i) => {
-      tl.fromTo(
-        word,
-        { opacity: 0, scale: 1.2 },
-        { opacity: 1, scale: 1, duration: 0.3, ease: "power2.out" },
-        i * 0.5
-      );
-      if (sequence[i]?.hold) {
-        tl.to({}, { duration: 0.5 });
-        if (lineRef.current) {
-          tl.fromTo(lineRef.current, { scaleX: 0 }, { scaleX: 1, duration: 0.4 }, "<");
-        }
-      }
-    });
-
-    if (sigRef.current) {
-      tl.fromTo(sigRef.current, { opacity: 0 }, { opacity: 1, duration: 0.4 }, ">-0.2");
-    }
-
-    return () => {
-      tl.scrollTrigger?.kill();
-      tl.kill();
-    };
-  }, []);
+  const sectionRef = useRef(null);
+  const inView = useInView(sectionRef, { once: true, margin: "-20% 0px" });
+  const reduced = prefersReducedMotion();
 
   return (
     <section
       id="vision"
       ref={sectionRef}
-      className="relative flex min-h-screen items-center justify-center overflow-hidden bg-black"
+      className="relative overflow-hidden bg-black py-28 md:py-36"
     >
       <div
-        className="pointer-events-none absolute inset-0 opacity-30"
+        className="pointer-events-none absolute inset-0 opacity-20"
         style={{
           background:
-            "radial-gradient(ellipse at 50% 50%, #0a1628 0%, #000000 60%, #000000 100%)",
-          animation: prefersReducedMotion() ? "none" : "oceanShift 12s ease-in-out infinite alternate",
+            "radial-gradient(ellipse at 50% 40%, #0a1628 0%, #000000 70%)",
         }}
       />
-      <style>{`
-        @keyframes oceanShift {
-          0% { filter: hue-rotate(0deg); }
-          100% { filter: hue-rotate(15deg); }
-        }
-      `}</style>
 
-      <div className="relative z-10 px-6 text-center">
-        <div ref={wordsRef} className="space-y-4">
-          {sequence.map((item, i) => (
-            <p
-              key={i}
-              data-word
-              className="font-display text-[clamp(2.5rem,6vw,4.5rem)] leading-tight font-bold text-white"
-              style={{ opacity: prefersReducedMotion() ? 1 : 0 }}
+      <div className="relative z-10 mx-auto max-w-4xl px-6 text-center">
+        <p className="font-mono mb-8 text-[10px] tracking-[0.15em] text-[#8899AA] uppercase">
+          Our vision
+        </p>
+
+        <div className="space-y-3 md:space-y-4">
+          {sequence.map((text, i) => (
+            <motion.p
+              key={text}
+              initial={reduced ? false : { opacity: 0, y: 16, scale: 1.04 }}
+              animate={
+                reduced || inView
+                  ? { opacity: 1, y: 0, scale: 1 }
+                  : { opacity: 0, y: 16, scale: 1.04 }
+              }
+              transition={{
+                duration: 0.35,
+                delay: reduced ? 0 : i * 0.08,
+                ease: [0.22, 1, 0.36, 1],
+              }}
+              className="font-display text-[clamp(2rem,5.5vw,3.75rem)] leading-tight font-bold text-white"
             >
-              {item.text}
-            </p>
+              {text}
+            </motion.p>
           ))}
         </div>
 
-        <div
-          ref={lineRef}
-          className="mx-auto mt-8 h-px w-full max-w-md bg-[#2D7DD2]"
-          style={{ transform: "scaleX(0)", transformOrigin: "center" }}
+        <motion.div
+          initial={reduced ? false : { scaleX: 0 }}
+          animate={reduced || inView ? { scaleX: 1 } : { scaleX: 0 }}
+          transition={{ duration: 0.4, delay: reduced ? 0 : 0.45 }}
+          className="mx-auto mt-10 h-px w-full max-w-md origin-center bg-[#2D7DD2]"
         />
 
-        <p
-          ref={sigRef}
-          className="font-mono mt-12 text-sm text-[#8899AA]"
-          style={{ opacity: prefersReducedMotion() ? 1 : 0 }}
+        <motion.p
+          initial={reduced ? false : { opacity: 0 }}
+          animate={reduced || inView ? { opacity: 1 } : { opacity: 0 }}
+          transition={{ duration: 0.35, delay: reduced ? 0 : 0.55 }}
+          className="font-mono mt-10 text-sm text-[#8899AA]"
         >
           — Arthur Chukwurah, Founder &amp; CEO
-        </p>
+        </motion.p>
       </div>
     </section>
   );

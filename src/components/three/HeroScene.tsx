@@ -61,8 +61,8 @@ export function HeroScene({ className = "" }: { className?: string }) {
     >
       <Canvas
         camera={{ position: [0, 0, 6], fov: 45 }}
-        dpr={Math.min(typeof window !== "undefined" ? window.devicePixelRatio : 1, 2)}
-        gl={{ alpha: true, antialias: true }}
+        dpr={1}
+        gl={{ alpha: true, antialias: false, powerPreference: "low-power" }}
       >
         <Scene mouse={mouse} />
       </Canvas>

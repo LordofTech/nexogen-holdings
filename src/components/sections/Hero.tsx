@@ -43,9 +43,9 @@ export function Hero() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{
                   type: "spring",
-                  stiffness: 120,
-                  damping: 22,
-                  delay: 2.4 + i * 0.15,
+                  stiffness: 140,
+                  damping: 24,
+                  delay: 0.15 + i * 0.08,
                 }}
                 className="font-display text-[clamp(3rem,8vw,6rem)] leading-[0.88] font-bold text-white"
               >
@@ -57,7 +57,7 @@ export function Hero() {
           <motion.p
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ delay: 3.3, duration: 0.6 }}
+            transition={{ delay: 0.5, duration: 0.4 }}
             className="font-body mt-8 max-w-[480px] text-lg text-[#8899AA]"
           >
             Nexogen Holdings is a technology company born in Lagos, building world-class software
@@ -67,7 +67,7 @@ export function Hero() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 3.5, type: "spring", stiffness: 100, damping: 22 }}
+            transition={{ delay: 0.6, type: "spring", stiffness: 120, damping: 22 }}
             className="mt-10 flex flex-wrap gap-4"
           >
             <a
@@ -90,7 +90,7 @@ export function Hero() {
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
-          transition={{ delay: 2.6, duration: 0.8 }}
+          transition={{ delay: 0.2, duration: 0.5 }}
           className="h-[50vh] lg:h-[80vh]"
         >
           <HeroScene />
@@ -100,7 +100,7 @@ export function Hero() {
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ delay: 3.8 }}
+        transition={{ delay: 0.75 }}
         className="absolute bottom-10 left-1/2 flex -translate-x-1/2 flex-col items-center gap-2"
       >
         <span className="font-mono text-[10px] tracking-[0.2em] text-[#8899AA] uppercase">

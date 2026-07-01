@@ -1,13 +1,9 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useEffect, useRef, useState, useCallback } from "react";
 import { ProductCard, type ProductData } from "@/components/ui/ProductCard";
 import { TrvrseLogo } from "@/components/ui/TrvrseLogo";
-import { prefersReducedMotion } from "@/lib/utils";
-
-gsap.registerPlugin(ScrollTrigger);
+import { cn } from "@/lib/utils";
 
 const products: ProductData[] = [
   {
@@ -20,7 +16,7 @@ const products: ProductData[] = [
     chips: ["80+ Countries", "Live FX Rates", "Virtual Cards"],
     link: "#contact",
     phone: true,
-    icon: <TrvrseLogo size={48} />,
+    icon: <TrvrseLogo size={48} blend />,
   },
   {
     id: "edunova",
@@ -111,46 +107,105 @@ function ChipIcon() {
 }
 
 export function Products() {
-  const sectionRef = useRef<HTMLElement>(null);
-  const trackRef = useRef<HTMLDivElement>(null);
+  const scrollerRef = useRef<HTMLDivElement>(null);
   const [activeIndex, setActiveIndex] = useState(0);
 
-  useEffect(() => {
-    if (prefersReducedMotion() || !sectionRef.current || !trackRef.current) return;
-
-    const totalScroll = trackRef.current.scrollWidth - window.innerWidth;
-
-    const ctx = gsap.context(() => {
-      gsap.to(trackRef.current, {
-        x: () => -totalScroll,
-        ease: "none",
-        scrollTrigger: {
-          trigger: sectionRef.current,
-          start: "top top",
-          end: () => `+=${totalScroll}`,
-          pin: true,
-          scrub: 1,
-          onUpdate: (self) => {
-            const idx = Math.round(self.progress * (products.length - 1));
-            setActiveIndex(idx);
-          },
-        },
-      });
-    }, sectionRef);
-
-    return () => ctx.revert();
+  const updateActive = useCallback(() => {
+    const el = scrollerRef.current;
+    if (!el) return;
+    const cardWidth = el.scrollWidth / products.length;
+    const idx = Math.round(el.scrollLeft / Math.max(cardWidth, 1));
+    setActiveIndex(Math.min(idx, products.length - 1));
   }, []);
 
+  useEffect(() => {
+    const el = scrollerRef.current;
+    if (!el) return;
+    el.addEventListener("scroll", updateActive, { passive: true });
+    return () => el.removeEventListener("scroll", updateActive);
+  }, [updateActive]);
+
+  const scrollByCard = (dir: -1 | 1) => {
+    const el = scrollerRef.current;
+    if (!el) return;
+    const card = el.querySelector("article");
+    const gap = 32;
+    const step = (card?.clientWidth ?? el.clientWidth * 0.8) + gap;
+    el.scrollBy({ left: dir * step, behavior: "smooth" });
+  };
+
   return (
-    <section id="products" ref={sectionRef} className="relative bg-black">
-      <div className="flex h-screen items-center overflow-hidden">
-        <div ref={trackRef} className="flex gap-8 px-[10vw]">
+    <section id="products" className="relative bg-black py-24">
+      <div className="mx-auto mb-10 max-w-7xl px-6 lg:px-10">
+        <p className="font-mono text-[10px] tracking-[0.15em] text-[#2D7DD2] uppercase">Products</p>
+        <h2 className="font-display mt-3 text-4xl font-bold text-white md:text-5xl">
+          What we build
+        </h2>
+        <p className="font-body mt-3 text-sm text-[#8899AA]">
+          Scroll horizontally to explore — vertical scroll is not interrupted.
+        </p>
+      </div>
+
+      <div className="relative">
+        <div
+          ref={scrollerRef}
+          data-lenis-prevent
+          data-lenis-prevent-wheel
+          className="flex touch-pan-x gap-8 overflow-x-auto overscroll-x-contain px-6 pb-6 snap-x snap-mandatory scroll-smooth lg:px-[10vw] [scrollbar-width:thin] [scrollbar-color:#2D7DD2_#1A1A1A]"
+          style={{ WebkitOverflowScrolling: "touch" }}
+        >
           {products.map((product, i) => (
-            <ProductCard key={product.id} product={product} isActive={i === activeIndex} />
+            <ProductCard
+              key={product.id}
+              product={product}
+              isActive={i === activeIndex}
+              className="snap-center"
+            />
           ))}
         </div>
+
+        <div className="mx-auto mt-6 flex max-w-7xl items-center justify-between px-6 lg:px-10">
+          <div className="flex gap-2">
+            {products.map((p, i) => (
+              <button
+                key={p.id}
+                type="button"
+                aria-label={`Go to ${p.name}`}
+                onClick={() => {
+                  const el = scrollerRef.current;
+                  if (!el) return;
+                  const card = el.querySelectorAll("article")[i];
+                  card?.scrollIntoView({ behavior: "smooth", inline: "center", block: "nearest" });
+                }}
+                className={cn(
+                  "h-1.5 rounded-full transition-all duration-300",
+                  i === activeIndex ? "w-8 bg-[#2D7DD2]" : "w-1.5 bg-[#1A1A1A]"
+                )}
+              />
+            ))}
+          </div>
+          <div className="flex gap-2">
+            <button
+              type="button"
+              onClick={() => scrollByCard(-1)}
+              className="rounded-full border border-[#1A1A1A] px-4 py-2 text-xs text-[#8899AA] hover:border-[#2D7DD2] hover:text-white"
+              aria-label="Previous product"
+            >
+              ←
+            </button>
+            <button
+              type="button"
+              onClick={() => scrollByCard(1)}
+              className="rounded-full border border-[#1A1A1A] px-4 py-2 text-xs text-[#8899AA] hover:border-[#2D7DD2] hover:text-white"
+              aria-label="Next product"
+            >
+              →
+            </button>
+          </div>
+        </div>
       </div>
-      <p className="font-display pb-24 text-center text-2xl italic text-[#4A4A4A] transition-colors hover:text-white">
+
+      <p className="font-display mt-16 text-center text-2xl italic text-[#4A4A4A] transition-colors hover:text-white">
         More products in development. Nexogen never stops building.
       </p>
     </section>

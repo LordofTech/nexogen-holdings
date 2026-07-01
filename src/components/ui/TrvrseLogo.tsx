@@ -5,10 +5,12 @@ export function TrvrseLogo({
   className = "",
   size = 48,
   variant = "mark",
+  blend = false,
 }: {
   className?: string;
   size?: number;
   variant?: "mark" | "lockup";
+  blend?: boolean;
 }) {
   const src =
     variant === "lockup"
@@ -24,7 +26,11 @@ export function TrvrseLogo({
       alt="Trvrse"
       width={width}
       height={height}
-      className={cn("object-contain", className)}
+      className={cn(
+        "object-contain",
+        blend && "opacity-95 mix-blend-screen saturate-150",
+        className
+      )}
       priority={false}
     />
   );

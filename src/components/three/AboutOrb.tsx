@@ -82,7 +82,7 @@ export function AboutOrb({ className = "" }: { className?: string }) {
     <div className={`h-full min-h-[400px] w-full ${className}`}>
       <Canvas
         camera={{ position: [0, 0, 6], fov: 45 }}
-        dpr={Math.min(typeof window !== "undefined" ? window.devicePixelRatio : 1, 2)}
+        dpr={1}
       >
         <ambientLight intensity={0.3} />
         <pointLight position={[5, 5, 5]} intensity={1} color="#2D7DD2" />
