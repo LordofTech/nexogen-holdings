@@ -3,6 +3,7 @@
 import { useRef, useState } from "react";
 import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
+import { TrvrseLogo } from "@/components/ui/TrvrseLogo";
 
 export type ProductData = {
   id: string;
@@ -69,7 +70,11 @@ export function ProductCard({
       </div>
 
       <div className="relative z-10 max-w-xl">
-        <h3 className="font-display text-5xl font-bold text-white md:text-7xl">{product.name}</h3>
+        {product.id === "trvrse" ? (
+          <TrvrseLogo variant="lockup" size={56} className="max-w-[min(100%,320px)]" />
+        ) : (
+          <h3 className="font-display text-5xl font-bold text-white md:text-7xl">{product.name}</h3>
+        )}
         <p className="font-body mt-3 text-base text-[#8899AA]">{product.subtitle}</p>
         {product.description && (
           <p className="font-body mt-4 max-w-md text-sm text-[#8899AA]/80">{product.description}</p>
@@ -101,22 +106,22 @@ export function ProductCard({
         ) : (
           <span />
         )}
-        {product.phone && <TraversePhone />}
+        {product.phone && <TrvrsePhone />}
       </div>
     </motion.article>
   );
 }
 
-function TraversePhone() {
+function TrvrsePhone() {
   return (
     <div
-      className="absolute -right-4 bottom-8 hidden w-44 rotate-[15deg] md:block lg:w-52"
+      className="absolute -right-4 bottom-8 hidden w-44 md:block lg:w-52"
       style={{ transform: "rotate(15deg) translateZ(20px)" }}
     >
       <div className="rounded-[2rem] border-2 border-[#1A1A1A] bg-black p-1.5 shadow-2xl">
         <div className="rounded-[1.6rem] bg-[#0A1628] p-4">
-          <p className="font-mono text-[8px] text-[#2D7DD2]">TRAVERSE</p>
-          <p className="font-display mt-2 text-lg font-bold text-white">₦2.45M</p>
+          <TrvrseLogo size={28} />
+          <p className="font-display mt-3 text-lg font-bold text-white">₦2.45M</p>
           <p className="font-mono text-[8px] text-[#06D6A0]">≈ $1,633 USD</p>
           <div className="mt-3 grid grid-cols-2 gap-1">
             {["Send", "Convert"].map((a) => (

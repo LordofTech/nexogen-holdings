@@ -107,7 +107,7 @@ export function Vision() {
           className="font-mono mt-12 text-sm text-[#8899AA]"
           style={{ opacity: prefersReducedMotion() ? 1 : 0 }}
         >
-          — Chukwurah Arthur Nnamdi, Founder &amp; CEO
+          — Arthur Chukwurah, Founder &amp; CEO
         </p>
       </div>
     </section>

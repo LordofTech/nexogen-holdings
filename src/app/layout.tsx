@@ -5,11 +5,10 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "Nexogen Holdings Limited | We Build Futures",
   description:
-    "Nigerian-born global technology holding company building world-class software across Fintech, Edutech, GovTech, and Hardware. Home of Traverse (TRVRSE).",
+    "Nigerian-born global technology holding company building world-class software across Fintech, Edutech, GovTech, and Hardware. Home of Trvrse.",
   keywords: [
     "Nexogen Holdings",
-    "Traverse",
-    "TRVRSE",
+    "Trvrse",
     "Fintech",
     "Edutech",
     "GovTech",

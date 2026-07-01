@@ -4,14 +4,15 @@ import { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ProductCard, type ProductData } from "@/components/ui/ProductCard";
+import { TrvrseLogo } from "@/components/ui/TrvrseLogo";
 import { prefersReducedMotion } from "@/lib/utils";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const products: ProductData[] = [
   {
-    id: "traverse",
-    name: "TRAVERSE",
+    id: "trvrse",
+    name: "Trvrse",
     subtitle: "Cross-Border Fintech Wallet",
     status: "live",
     bg: "linear-gradient(135deg, #0A1628 0%, #0d1f3c 50%, #0A1628 100%)",
@@ -19,9 +20,7 @@ const products: ProductData[] = [
     chips: ["80+ Countries", "Live FX Rates", "Virtual Cards"],
     link: "#contact",
     phone: true,
-    icon: (
-      <span className="font-display text-4xl font-bold text-[#2D7DD2]">T</span>
-    ),
+    icon: <TrvrseLogo size={48} />,
   },
   {
     id: "edunova",

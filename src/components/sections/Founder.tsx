@@ -19,7 +19,7 @@ export function Founder() {
         >
           <Image
             src="/assets/Me As CEO.jpeg"
-            alt="Chukwurah Arthur Nnamdi, Founder and CEO of Nexogen Holdings"
+            alt="Arthur Chukwurah, Founder and CEO of Nexogen Holdings"
             fill
             className="object-cover object-top"
             sizes="(max-width: 1024px) 100vw, 50vw"
@@ -27,7 +27,7 @@ export function Founder() {
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
           <p className="font-display absolute bottom-8 left-8 text-4xl font-bold text-white">
-            Arthur Nnamdi
+            Arthur Chukwurah
           </p>
         </motion.div>
 
@@ -41,9 +41,9 @@ export function Founder() {
           </p>
           <h2 className="font-display mt-4 text-5xl font-bold text-white">Built by a builder.</h2>
           <p className="font-body mt-6 text-base leading-relaxed text-[#8899AA]">
-            Chukwurah Arthur Nnamdi is a full-stack software engineer, product designer, and
-            technology entrepreneur from Nigeria. He founded Nexogen Holdings with one belief —
-            that the best African technology products have not been built yet. He is building them.
+            Arthur Chukwurah is a full-stack software engineer, product designer, and technology
+            entrepreneur from Nigeria. He founded Nexogen Holdings with one belief — that the best
+            African technology products have not been built yet. He is building them.
           </p>
 
           <blockquote className="mt-10 border-l-2 border-[#2D7DD2] pl-6">
@@ -53,9 +53,7 @@ export function Founder() {
               of Africans.
             </p>
             <span className="font-display mt-2 block text-4xl text-[#2D7DD2]">&rdquo;</span>
-            <p className="font-display mt-4 text-lg italic text-[#8899AA]">
-              Chukwurah Arthur Nnamdi
-            </p>
+            <p className="font-display mt-4 text-lg italic text-[#8899AA]">Arthur Chukwurah</p>
           </blockquote>
 
           <div className="mt-8 flex flex-wrap gap-3">

@@ -11,7 +11,7 @@ import { About } from "@/components/sections/About";
 import { HowWeBuild } from "@/components/sections/HowWeBuild";
 import { Founder } from "@/components/sections/Founder";
 import { Partners } from "@/components/sections/Partners";
-import { Careers } from "@/components/sections/Careers";
+import { Pipeline } from "@/components/sections/Pipeline";
 import { Footer } from "@/components/sections/Footer";
 
 const Products = dynamic(
@@ -39,7 +39,7 @@ export function HomePage() {
           <HowWeBuild />
           <Founder />
           <Partners />
-          <Careers />
+          <Pipeline />
         </main>
         <Footer />
       </LoadSequence>

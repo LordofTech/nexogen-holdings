@@ -2,7 +2,7 @@
 
 import { NexogenMark } from "@/components/ui/NexogenMark";
 
-const footerLinks = ["About", "Products", "Vision", "Careers", "Contact"];
+const footerLinks = ["About", "Products", "Vision", "Pipeline", "Contact"];
 
 export function Footer() {
   return (
@@ -28,7 +28,7 @@ export function Footer() {
             className="font-body flex h-[52px] items-center rounded-full border border-[#1A1A1A] px-8 text-sm text-white"
             data-cursor-label="View"
           >
-            View Traverse
+            View Trvrse
           </a>
         </div>
         <div className="font-mono mt-16 flex flex-wrap justify-center gap-8 text-xs text-[#8899AA]">
