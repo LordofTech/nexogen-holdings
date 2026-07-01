@@ -1,15 +1,20 @@
 @import "tailwindcss";
 
 @theme {
-  --color-charcoal-deep: #101010;
-  --color-charcoal-light: #181818;
-  --color-slate-grid: #2c3539;
-  --color-cyan-kinetic: #00ffff;
-  --color-sky-kinetic: #00bfff;
-  --color-text-body: #c0c0c0;
-  --color-text-white: #ffffff;
+  --color-black: #000000;
+  --color-surface: #0a0a0a;
+  --color-surface-footer: #050505;
+  --color-border: #1a1a1a;
+  --color-blue: #2d7dd2;
+  --color-emerald: #06d6a0;
+  --color-gold: #ffd700;
+  --color-text-primary: #ffffff;
+  --color-text-secondary: #8899aa;
+  --color-text-muted: #4a4a4a;
 
-  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-cabinet), ui-sans-serif, system-ui, sans-serif;
+  --font-body: var(--font-general), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, monospace;
 }
 
 * {
@@ -17,74 +22,135 @@
 }
 
 html {
-  scroll-behavior: smooth;
+  scroll-behavior: auto;
+}
+
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
 }
 
 body {
-  background: linear-gradient(180deg, #101010 0%, #181818 50%, #101010 100%);
-  color: var(--color-text-body);
-  font-family: var(--font-sans);
+  background: #000000;
+  color: #ffffff;
+  font-family: var(--font-body);
   overflow-x: hidden;
+  cursor: none;
+}
+
+@media (pointer: coarse) {
+  body {
+    cursor: auto;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }
 
 ::selection {
-  background: rgba(0, 255, 255, 0.25);
+  background: rgba(45, 125, 210, 0.35);
   color: #ffffff;
 }
 
-.section-padding {
-  padding-top: 150px;
-  padding-bottom: 150px;
+.font-display {
+  font-family: var(--font-display);
 }
 
-.glow-cyan {
-  text-shadow: 0 0 30px rgba(0, 255, 255, 0.4);
+.font-body {
+  font-family: var(--font-body);
 }
 
-.glow-text-cyan {
-  color: var(--color-cyan-kinetic);
-  text-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+.font-mono {
+  font-family: var(--font-mono);
 }
 
-.grid-border {
-  border: 1px solid var(--color-slate-grid);
-}
-
-.kinetic-gradient {
-  background: linear-gradient(135deg, #00ffff 0%, #00bfff 100%);
+.gradient-text {
+  background: linear-gradient(135deg, #2d7dd2 0%, #06d6a0 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
-@keyframes pulse-glow {
-  0%, 100% { opacity: 0.6; transform: scale(1); }
-  50% { opacity: 1; transform: scale(1.05); }
+.glass {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
 }
 
-@keyframes ripple {
-  0% { transform: scale(0.8); opacity: 0.8; }
-  100% { transform: scale(2.5); opacity: 0; }
+.pill {
+  border-radius: 999px;
 }
 
-@keyframes float {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-12px); }
+.card-surface {
+  background: #0a0a0a;
+  border: 1px solid #1a1a1a;
 }
 
-@keyframes flow-horizontal {
-  0% { transform: translateX(-100%); }
-  100% { transform: translateX(100%); }
+[data-cursor-hover] {
+  cursor: none;
 }
 
-.animate-pulse-glow {
-  animation: pulse-glow 3s ease-in-out infinite;
+@keyframes ticker {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
 }
 
-.animate-float {
-  animation: float 4s ease-in-out infinite;
+@keyframes bounce-chevron {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(6px);
+  }
 }
 
-.animate-ripple {
-  animation: ripple 2.5s ease-out infinite;
+@keyframes pulse-live {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.animate-ticker {
+  animation: ticker 30s linear infinite;
+}
+
+.animate-bounce-chevron {
+  animation: bounce-chevron 1.8s ease-in-out infinite;
+}
+
+.animate-pulse-live {
+  animation: pulse-live 2s ease-in-out infinite;
+}
+
+.animate-ticker:hover {
+  animation-play-state: paused;
 }

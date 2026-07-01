@@ -1,26 +1,26 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { GeistMono } from "geist/font/mono";
 import "./globals.css";
 
-const inter = Inter({
-  subsets: ["latin"],
-  variable: "--font-inter",
-  display: "swap",
-});
-
 export const metadata: Metadata = {
-  title: "Nexogen Holdings Limited | Architecting the Future",
+  title: "Nexogen Holdings Limited | We Build Futures",
   description:
-    "A multi-sector venture studio. Flagship innovation TRVRSE — optimized transactions, secured infrastructure, and global scalability.",
+    "Nigerian-born global technology holding company building world-class software across Fintech, Edutech, GovTech, and Hardware. Home of Traverse (TRVRSE).",
   keywords: [
     "Nexogen Holdings",
+    "Traverse",
     "TRVRSE",
-    "Venture Studio",
     "Fintech",
+    "Edutech",
     "GovTech",
-    "EdTech",
-    "HealthTech",
+    "Africa",
+    "Lagos",
   ],
+  openGraph: {
+    title: "Nexogen Holdings Limited",
+    description: "We Don't Build Apps. We Build Futures.",
+    type: "website",
+  },
 };
 
 export default function RootLayout({
@@ -29,8 +29,25 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={inter.variable}>
-      <body className="antialiased">{children}</body>
+    <html lang="en">
+      <head>
+        <link
+          href="https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@400,500,700,800&f[]=general-sans@400,500,600&display=swap"
+          rel="stylesheet"
+        />
+      </head>
+      <body
+        className={`${GeistMono.variable} antialiased`}
+        style={
+          {
+            "--font-cabinet": "'Cabinet Grotesk', sans-serif",
+            "--font-general": "'General Sans', sans-serif",
+            "--font-geist-mono": GeistMono.style.fontFamily,
+          } as React.CSSProperties
+        }
+      >
+        {children}
+      </body>
     </html>
   );
 }
