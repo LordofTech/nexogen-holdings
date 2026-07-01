@@ -1,0 +1,205 @@
+{
+  "projectId": "12369773356667041094",
+  "projectTitle": "Nexogen Holdings Tech Portal",
+  "exportedAt": "2026-07-01T01:20:21.472Z",
+  "screens": [
+    {
+      "slug": "01-design-system",
+      "title": "Design System",
+      "id": "assets/02174d1f084949cea296207efc02a924",
+      "displayName": "Synthetic Intelligence Framework",
+      "designSystem": ".stitch/nexogen-holdings-tech-portal/design-system",
+      "files": {
+        "json": ".stitch/nexogen-holdings-tech-portal/design-system/design-system.json",
+        "designMd": ".stitch/nexogen-holdings-tech-portal/design-system/DESIGN.md",
+        "theme": ".stitch/nexogen-holdings-tech-portal/design-system/theme.json"
+      }
+    },
+    {
+      "slug": "02-three-js",
+      "title": "Three.js",
+      "id": "a574863a83a044f9b211ccff20698b85",
+      "ext": "html",
+      "mimeType": "text/html",
+      "code": ".stitch/nexogen-holdings-tech-portal/html/02-three-js.html",
+      "image": null,
+      "htmlUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sXzZmMTI5ZWVmZTExNjQwODA4OGVkN2U1M2JlNmYzYjY2EgsSBxDh4Iil6RUYAZIBJAoKcHJvamVjdF9pZBIWQhQxMjM2OTc3MzM1NjY2NzA0MTA5NA&filename=&opi=89354086",
+      "imageUrl": null,
+      "metadata": {
+        "height": "512",
+        "htmlCode": {
+          "downloadUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sXzZmMTI5ZWVmZTExNjQwODA4OGVkN2U1M2JlNmYzYjY2EgsSBxDh4Iil6RUYAZIBJAoKcHJvamVjdF9pZBIWQhQxMjM2OTc3MzM1NjY2NzA0MTA5NA&filename=&opi=89354086",
+          "mimeType": "text/html",
+          "name": "projects/12369773356667041094/files/6c5604f3c0c743ad865c58f9530dac4f"
+        },
+        "name": "projects/12369773356667041094/screens/a574863a83a044f9b211ccff20698b85",
+        "screenshot": {},
+        "title": "Three.js",
+        "width": "512",
+        "projectId": "12369773356667041094"
+      }
+    },
+    {
+      "slug": "03-nexogen-ui-ux-flow",
+      "title": "Nexogen UI/UX Flow",
+      "id": "115f3334d6754f7fb7f9df3dd92e1b17",
+      "ext": "md",
+      "mimeType": "text/markdown",
+      "code": ".stitch/nexogen-holdings-tech-portal/html/03-nexogen-ui-ux-flow.md",
+      "image": null,
+      "htmlUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sXzI0MGFjODg1YzBjZDRjYWM4MTFlZDQ2NDk4YTc4MTQzEgsSBxDh4Iil6RUYAZIBJAoKcHJvamVjdF9pZBIWQhQxMjM2OTc3MzM1NjY2NzA0MTA5NA&filename=&opi=89354086",
+      "imageUrl": null,
+      "metadata": {
+        "deviceType": "DESKTOP",
+        "height": "0",
+        "htmlCode": {
+          "downloadUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sXzI0MGFjODg1YzBjZDRjYWM4MTFlZDQ2NDk4YTc4MTQzEgsSBxDh4Iil6RUYAZIBJAoKcHJvamVjdF9pZBIWQhQxMjM2OTc3MzM1NjY2NzA0MTA5NA&filename=&opi=89354086",
+          "mimeType": "text/markdown",
+          "name": "projects/12369773356667041094/files/88a119c072b04528a96827a3457a7e33"
+        },
+        "name": "projects/12369773356667041094/screens/115f3334d6754f7fb7f9df3dd92e1b17",
+        "screenshot": {},
+        "title": "Nexogen UI/UX Flow",
+        "width": "0",
+        "projectId": "12369773356667041094"
+      }
+    },
+    {
+      "slug": "04-shader",
+      "title": "Shader",
+      "id": "b60ab6ec011f4215a50894cddc149e1e",
+      "ext": "html",
+      "mimeType": "text/html",
+      "code": ".stitch/nexogen-holdings-tech-portal/html/04-shader.html",
+      "image": null,
+      "htmlUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sXzc3NTEwZGU4MTc4NTRmODU5ZWFhZDU3YTE3MTIxNDdmEgsSBxDh4Iil6RUYAZIBJAoKcHJvamVjdF9pZBIWQhQxMjM2OTc3MzM1NjY2NzA0MTA5NA&filename=&opi=89354086",
+      "imageUrl": null,
+      "metadata": {
+        "height": "512",
+        "htmlCode": {
+          "downloadUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sXzc3NTEwZGU4MTc4NTRmODU5ZWFhZDU3YTE3MTIxNDdmEgsSBxDh4Iil6RUYAZIBJAoKcHJvamVjdF9pZBIWQhQxMjM2OTc3MzM1NjY2NzA0MTA5NA&filename=&opi=89354086",
+          "mimeType": "text/html",
+          "name": "projects/12369773356667041094/files/8ca4a2363f78472e96ea19f5fb902c42"
+        },
+        "name": "projects/12369773356667041094/screens/b60ab6ec011f4215a50894cddc149e1e",
+        "screenshot": {},
+        "title": "Shader",
+        "width": "512",
+        "projectId": "12369773356667041094"
+      }
+    },
+    {
+      "slug": "05-nexogen-ecosystem",
+      "title": "Nexogen | Ecosystem",
+      "id": "a6f771d2a37945c382be3dcbb2595ab1",
+      "ext": "html",
+      "mimeType": "text/html",
+      "code": ".stitch/nexogen-holdings-tech-portal/html/05-nexogen-ecosystem.html",
+      "image": ".stitch/nexogen-holdings-tech-portal/images/05-nexogen-ecosystem.png",
+      "htmlUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sXzc2NzJhMGMwOTgzZTQwZGM4Zjc5MTRmZjE1ODQ2MDY0EgsSBxDh4Iil6RUYAZIBJAoKcHJvamVjdF9pZBIWQhQxMjM2OTc3MzM1NjY2NzA0MTA5NA&filename=&opi=89354086",
+      "imageUrl": "https://lh3.googleusercontent.com/aida/AP1WRLvFjOW4GRi9m0Lzj83stIukJjr4q3Y12rqvhKOVZJmFTV_sKoYt5_W7u4AoHbGiWxmuI-yJlqYXyv5i1yWxJeQwPO06uBySD3NY9gE2JLqNVGUcKn-fRBi_I23HXQQQQK39t25-xDFbZc8XQfkRiUKT_xSpjbPclBFI5FOFci7YfWLL4muBTwVj2hie5j44v0KWIUZh-z7ywiYpezbNw_VDkDRQdIeaDRfJWph21lpMk4QV8xiixjQz7yA=w1280",
+      "metadata": {
+        "deviceType": "MOBILE",
+        "height": "4248",
+        "htmlCode": {
+          "downloadUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sXzc2NzJhMGMwOTgzZTQwZGM4Zjc5MTRmZjE1ODQ2MDY0EgsSBxDh4Iil6RUYAZIBJAoKcHJvamVjdF9pZBIWQhQxMjM2OTc3MzM1NjY2NzA0MTA5NA&filename=&opi=89354086",
+          "mimeType": "text/html",
+          "name": "projects/12369773356667041094/files/f6dc2434205a4899a58e4821d4f770af"
+        },
+        "name": "projects/12369773356667041094/screens/a6f771d2a37945c382be3dcbb2595ab1",
+        "screenshot": {
+          "downloadUrl": "https://lh3.googleusercontent.com/aida/AP1WRLvFjOW4GRi9m0Lzj83stIukJjr4q3Y12rqvhKOVZJmFTV_sKoYt5_W7u4AoHbGiWxmuI-yJlqYXyv5i1yWxJeQwPO06uBySD3NY9gE2JLqNVGUcKn-fRBi_I23HXQQQQK39t25-xDFbZc8XQfkRiUKT_xSpjbPclBFI5FOFci7YfWLL4muBTwVj2hie5j44v0KWIUZh-z7ywiYpezbNw_VDkDRQdIeaDRfJWph21lpMk4QV8xiixjQz7yA",
+          "name": "projects/12369773356667041094/files/98574069bab645098b84a4e4f0c05648"
+        },
+        "title": "Nexogen | Ecosystem",
+        "width": "780",
+        "projectId": "12369773356667041094"
+      }
+    },
+    {
+      "slug": "06-nexogen-hero-protocol",
+      "title": "Nexogen | Hero Protocol",
+      "id": "623a04ee08114cd7a1c884fb7aa77130",
+      "ext": "html",
+      "mimeType": "text/html",
+      "code": ".stitch/nexogen-holdings-tech-portal/html/06-nexogen-hero-protocol.html",
+      "image": ".stitch/nexogen-holdings-tech-portal/images/06-nexogen-hero-protocol.png",
+      "htmlUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sX2MxYjgxMTkxYWNlNTQ2MmY5OWM2ZGQzZjRhNTBlMmQ2EgsSBxDh4Iil6RUYAZIBJAoKcHJvamVjdF9pZBIWQhQxMjM2OTc3MzM1NjY2NzA0MTA5NA&filename=&opi=89354086",
+      "imageUrl": "https://lh3.googleusercontent.com/aida/AP1WRLtBKqfrNZcgsZpmRmPOHwsWkeclm_DiwT_0i09GZTsBjrTcnMUyNRdmbMsi4IvHboVcKakkYBDLRCFboRPGThc7EcXy0E8ochzxf3UveZ1EPVn_cSnd0pkBWDAIJG1WI-ahmWOUUx7o-NykxoasFqvtV3MuclqmjWCGsSb8r8tqh7gr9IgYc-ZMBfhmJMOFMA8EZm7e73g-l8PvmRvAJqZUEqyAWmVYxUUmOusjEZhtP7ulxnpRNJRSRvs=w1280",
+      "metadata": {
+        "deviceType": "MOBILE",
+        "height": "4438",
+        "htmlCode": {
+          "downloadUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sX2MxYjgxMTkxYWNlNTQ2MmY5OWM2ZGQzZjRhNTBlMmQ2EgsSBxDh4Iil6RUYAZIBJAoKcHJvamVjdF9pZBIWQhQxMjM2OTc3MzM1NjY2NzA0MTA5NA&filename=&opi=89354086",
+          "mimeType": "text/html",
+          "name": "projects/12369773356667041094/files/a67cd365d307494886b9f3170c52a4c0"
+        },
+        "name": "projects/12369773356667041094/screens/623a04ee08114cd7a1c884fb7aa77130",
+        "screenshot": {
+          "downloadUrl": "https://lh3.googleusercontent.com/aida/AP1WRLtBKqfrNZcgsZpmRmPOHwsWkeclm_DiwT_0i09GZTsBjrTcnMUyNRdmbMsi4IvHboVcKakkYBDLRCFboRPGThc7EcXy0E8ochzxf3UveZ1EPVn_cSnd0pkBWDAIJG1WI-ahmWOUUx7o-NykxoasFqvtV3MuclqmjWCGsSb8r8tqh7gr9IgYc-ZMBfhmJMOFMA8EZm7e73g-l8PvmRvAJqZUEqyAWmVYxUUmOusjEZhtP7ulxnpRNJRSRvs",
+          "name": "projects/12369773356667041094/files/4b1e86a58f31480cb3e980ee933c3996"
+        },
+        "title": "Nexogen | Hero Protocol",
+        "width": "780",
+        "projectId": "12369773356667041094"
+      }
+    },
+    {
+      "slug": "07-nexogen-intelligence-hub",
+      "title": "Nexogen | Intelligence Hub",
+      "id": "9ee3921c5a7742a6b7c8e1c6505ccec4",
+      "ext": "html",
+      "mimeType": "text/html",
+      "code": ".stitch/nexogen-holdings-tech-portal/html/07-nexogen-intelligence-hub.html",
+      "image": ".stitch/nexogen-holdings-tech-portal/images/07-nexogen-intelligence-hub.png",
+      "htmlUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sXzZjMTUwZDZjNDA0NDQ2MjZhODg2OGZiNDNkNDdhNzlmEgsSBxDh4Iil6RUYAZIBJAoKcHJvamVjdF9pZBIWQhQxMjM2OTc3MzM1NjY2NzA0MTA5NA&filename=&opi=89354086",
+      "imageUrl": "https://lh3.googleusercontent.com/aida/AP1WRLsImbVIWqHDY3LcotyoWvDafSaUvxRhcrIrICmmuHkoBlCkewcriaMRJgmpMYAJYSiqXR9VGUy8dxMkBVSK_hjrrN4bgREmhFaDOzdn_KZx-H0rIkYGOOUmMSnz2MheRZUXjECzwc1t3XHVzDlUPqIdhScvdA7PqYbAhoMMJ0gfnTsSxFtAY4BuXWJgIIkTd-YvjeRM1ENi2rO4_s8Zdm-BjSq0nBsbjBEANPpI1yiBRl-xgHMK33lDhIMW=w1280",
+      "metadata": {
+        "deviceType": "MOBILE",
+        "height": "7122",
+        "htmlCode": {
+          "downloadUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sXzZjMTUwZDZjNDA0NDQ2MjZhODg2OGZiNDNkNDdhNzlmEgsSBxDh4Iil6RUYAZIBJAoKcHJvamVjdF9pZBIWQhQxMjM2OTc3MzM1NjY2NzA0MTA5NA&filename=&opi=89354086",
+          "mimeType": "text/html",
+          "name": "projects/12369773356667041094/files/0d54c34084334937bf895039eedd9f62"
+        },
+        "name": "projects/12369773356667041094/screens/9ee3921c5a7742a6b7c8e1c6505ccec4",
+        "screenshot": {
+          "downloadUrl": "https://lh3.googleusercontent.com/aida/AP1WRLsImbVIWqHDY3LcotyoWvDafSaUvxRhcrIrICmmuHkoBlCkewcriaMRJgmpMYAJYSiqXR9VGUy8dxMkBVSK_hjrrN4bgREmhFaDOzdn_KZx-H0rIkYGOOUmMSnz2MheRZUXjECzwc1t3XHVzDlUPqIdhScvdA7PqYbAhoMMJ0gfnTsSxFtAY4BuXWJgIIkTd-YvjeRM1ENi2rO4_s8Zdm-BjSq0nBsbjBEANPpI1yiBRl-xgHMK33lDhIMW",
+          "name": "projects/12369773356667041094/files/d330353ea2994ba89f77cc4ef6e88043"
+        },
+        "title": "Nexogen | Intelligence Hub",
+        "width": "780",
+        "projectId": "12369773356667041094"
+      }
+    },
+    {
+      "slug": "08-nexogen-secure-uplink",
+      "title": "Nexogen | Secure Uplink",
+      "id": "40e09745f232443186fc26170d134251",
+      "ext": "html",
+      "mimeType": "text/html",
+      "code": ".stitch/nexogen-holdings-tech-portal/html/08-nexogen-secure-uplink.html",
+      "image": ".stitch/nexogen-holdings-tech-portal/images/08-nexogen-secure-uplink.png",
+      "htmlUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sXzc5MDUwNWQ4ZWMxNjRmNzRhYmRkNzcwMjI1NTRiODZjEgsSBxDh4Iil6RUYAZIBJAoKcHJvamVjdF9pZBIWQhQxMjM2OTc3MzM1NjY2NzA0MTA5NA&filename=&opi=89354086",
+      "imageUrl": "https://lh3.googleusercontent.com/aida/AP1WRLshQA8cxybA5k7VVGxjvkKJFRy1dTD87uvtvtSzWuN4mC2rI7cl3DuD9wEg_BGPsK48F4DNVjE1AGcsjyeQF4WrFf2jQEAriJ3k9U9ewZS3KrVQipYf0iWSTnA8V2UUyQUC8tjIYrYrI91UGrKkaftkmd2WpssbUOiDcXiDyxO5zMX1VFC9H5tOqIqVkK6FX0fWQObygecsnzFW6L80AliYbviMVlGAs-c0RT9DNDR7IixszwtyElNUYWk7=w1280",
+      "metadata": {
+        "deviceType": "MOBILE",
+        "height": "4134",
+        "htmlCode": {
+          "downloadUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sXzc5MDUwNWQ4ZWMxNjRmNzRhYmRkNzcwMjI1NTRiODZjEgsSBxDh4Iil6RUYAZIBJAoKcHJvamVjdF9pZBIWQhQxMjM2OTc3MzM1NjY2NzA0MTA5NA&filename=&opi=89354086",
+          "mimeType": "text/html",
+          "name": "projects/12369773356667041094/files/24041fba852c4c3fb8de9dd1278754c8"
+        },
+        "name": "projects/12369773356667041094/screens/40e09745f232443186fc26170d134251",
+        "screenshot": {
+          "downloadUrl": "https://lh3.googleusercontent.com/aida/AP1WRLshQA8cxybA5k7VVGxjvkKJFRy1dTD87uvtvtSzWuN4mC2rI7cl3DuD9wEg_BGPsK48F4DNVjE1AGcsjyeQF4WrFf2jQEAriJ3k9U9ewZS3KrVQipYf0iWSTnA8V2UUyQUC8tjIYrYrI91UGrKkaftkmd2WpssbUOiDcXiDyxO5zMX1VFC9H5tOqIqVkK6FX0fWQObygecsnzFW6L80AliYbviMVlGAs-c0RT9DNDR7IixszwtyElNUYWk7",
+          "name": "projects/12369773356667041094/files/95fdd45913614a409188c0e419aa0b8c"
+        },
+        "title": "Nexogen | Secure Uplink",
+        "width": "780",
+        "projectId": "12369773356667041094"
+      }
+    }
+  ],
+  "failures": []
+}

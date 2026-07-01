@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>NEXOGEN | Intelligence Hub</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-high": "#292a2a",
+                        "on-primary-container": "#f8f7ff",
+                        "on-secondary-container": "#006a70",
+                        "surface-tint": "#b3c5ff",
+                        "secondary": "#ddfcff",
+                        "error-container": "#93000a",
+                        "tertiary": "#c9c6c5",
+                        "on-primary": "#002b75",
+                        "on-secondary-fixed": "#002022",
+                        "on-primary-fixed": "#001849",
+                        "on-surface-variant": "#c2c6d8",
+                        "on-tertiary-container": "#faf7f6",
+                        "secondary-fixed": "#74f5ff",
+                        "outline-variant": "#424656",
+                        "on-tertiary-fixed-variant": "#474646",
+                        "primary": "#b3c5ff",
+                        "tertiary-fixed": "#e5e2e1",
+                        "on-error-container": "#ffdad6",
+                        "primary-container": "#0066ff",
+                        "tertiary-fixed-dim": "#c9c6c5",
+                        "error": "#ffb4ab",
+                        "on-tertiary": "#313030",
+                        "inverse-surface": "#e3e2e2",
+                        "surface-container": "#1e2020",
+                        "tertiary-container": "#737171",
+                        "on-surface": "#e3e2e2",
+                        "surface-variant": "#343535",
+                        "secondary-container": "#00f1fe",
+                        "surface-container-low": "#1a1c1c",
+                        "outline": "#8c90a1",
+                        "background": "#121414",
+                        "on-background": "#e3e2e2",
+                        "surface-dim": "#121414",
+                        "surface-container-lowest": "#0d0e0f",
+                        "surface-bright": "#383939",
+                        "on-tertiary-fixed": "#1c1b1b",
+                        "primary-fixed-dim": "#b3c5ff",
+                        "on-error": "#690005",
+                        "on-secondary-fixed-variant": "#004f54",
+                        "inverse-on-surface": "#2f3131",
+                        "surface-container-highest": "#343535",
+                        "primary-fixed": "#dae1ff",
+                        "inverse-primary": "#0054d6",
+                        "secondary-fixed-dim": "#00dbe7",
+                        "surface": "#121414",
+                        "on-primary-fixed-variant": "#003fa4",
+                        "on-secondary": "#00363a"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "margin-mobile": "20px",
+                        "container-max": "1440px",
+                        "gutter": "24px",
+                        "unit": "4px",
+                        "margin-desktop": "64px"
+                    },
+                    "fontFamily": {
+                        "display-lg": ["Sora"],
+                        "headline-md": ["Sora"],
+                        "body-lg": ["Inter"],
+                        "code-sm": ["JetBrains Mono"],
+                        "label-caps": ["JetBrains Mono"],
+                        "body-md": ["Inter"],
+                        "display-lg-mobile": ["Sora"]
+                    },
+                    "fontSize": {
+                        "display-lg": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "headline-md": ["24px", {"lineHeight": "1.3", "letterSpacing": "0.02em", "fontWeight": "600"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "letterSpacing": "0", "fontWeight": "400"}],
+                        "code-sm": ["14px", {"lineHeight": "1.4", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                        "label-caps": ["12px", {"lineHeight": "1.2", "letterSpacing": "0.1em", "fontWeight": "700"}],
+                        "body-md": ["16px", {"lineHeight": "1.5", "letterSpacing": "0", "fontWeight": "400"}],
+                        "display-lg-mobile": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700"}]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        @keyframes ticker {
+            0% { transform: translateX(100%); }
+            100% { transform: translateX(-100%); }
+        }
+        .animate-ticker {
+            animation: ticker 30s linear infinite;
+        }
+        .glass-card {
+            background: rgba(5, 5, 5, 0.4);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .glass-card:hover {
+            border-color: rgba(0, 241, 254, 0.3);
+        }
+        body {
+            background-color: #050505;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="text-on-background selection:bg-secondary-container selection:text-on-secondary">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-background/40 backdrop-blur-md border-b border-white/10">
+<div class="flex justify-between items-center px-margin-mobile md:px-margin-desktop h-16 w-full max-w-container-max mx-auto">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary" data-icon="terminal">terminal</span>
+<span class="font-display-lg text-display-lg-mobile md:text-display-lg tracking-tighter text-on-background">NEXOGEN</span>
+</div>
+<div class="hidden md:flex items-center gap-8">
+<nav class="flex gap-6">
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-secondary-container transition-colors duration-300" href="#">EXPLORE</a>
+<a class="font-label-caps text-label-caps text-secondary transition-colors duration-300" href="#">HUB</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-secondary-container transition-colors duration-300" href="#">NETWORK</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-secondary-container transition-colors duration-300" href="#">SUPPORT</a>
+</nav>
+</div>
+<div class="font-label-caps text-label-caps text-primary">SYSTEM: ONLINE</div>
+</div>
+</header>
+<main class="pt-24 pb-32 min-h-screen">
+<!-- System Log Ticker -->
+<div class="w-full bg-surface-container-lowest py-2 border-b border-white/5 overflow-hidden whitespace-nowrap">
+<div class="inline-block animate-ticker font-code-sm text-code-sm text-secondary-container opacity-80 uppercase tracking-widest">
+                UPLINK ESTABLISHED... ENCRYPTING DATA STREAMS... [SESSIONID: 8x72-99L-00A]... NEURAL OVERRIDE INJECTED... SECURING PORT 443... SYSTEM LATENCY: 2ms... QUANTUM DECRYPTOR ONLINE... BROADCASTING INTEL...
+            </div>
+</div>
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop mt-12">
+<!-- Header Section -->
+<div class="mb-16">
+<p class="font-label-caps text-label-caps text-primary mb-2">INTELLIGENCE_RECORDS_V2.4</p>
+<h1 class="font-display-lg text-display-lg-mobile md:text-display-lg max-w-2xl">LATEST INTEL BRIEFS &amp; INFRASTRUCTURE UPDATES.</h1>
+</div>
+<!-- Bento Layout Content -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<!-- Main Featured Post -->
+<article class="md:col-span-8 group cursor-pointer">
+<div class="glass-card rounded overflow-hidden h-full flex flex-col">
+<div class="relative h-96 w-full overflow-hidden">
+<div class="absolute inset-0 bg-gradient-to-t from-[#050505] to-transparent z-10 opacity-60"></div>
+<div class="w-full h-full bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="A cinematic, high-contrast digital rendering of a sleek, futuristic server farm illuminated by thin lines of cyan and blue glowing light. The atmosphere is dark and atmospheric, evoking high-tech espionage and advanced data security. Shadows are deep black, while the highlights are sharp electric blue, matching a premium cybernetic aesthetic." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCV0v2v8NEjTv_-3m38Vc_yWL81XxIfAtVF9s9Bo1G86UJibE249U2rxtGvoluTCD9jHzIPuwarAVrVNVuBVGdmDxLYoiPsIoFG2BMSrO2IHUKQfCIpKXuiePthgKkPBGwaa5GVrizWPbBUCOl1R1Af2hB4HcE2m0ZrWR6P1z9ZOfSLIqNhg4_lXMqRo4afUQ0p4qJ6o3hc8ZOLjs3kkr8e16zRnCYOfd7dpR9CWUrJCmDp2ICh9DOPB3n2dGIXhfmRRW8e7Xf8DKtm')">
+</div>
+<div class="absolute bottom-6 left-6 z-20">
+<span class="bg-primary/20 text-primary font-code-sm text-code-sm px-3 py-1 border border-primary/30 rounded-full">PRIORITY_ALPHA</span>
+</div>
+</div>
+<div class="p-8">
+<div class="flex items-center gap-4 mb-4 font-code-sm text-code-sm text-outline">
+<span>2024.05.12</span>
+<span class="w-1 h-1 bg-outline rounded-full"></span>
+<span>CYBERNETIC_SECURITY</span>
+</div>
+<h2 class="font-headline-md text-headline-md mb-4 group-hover:text-secondary-container transition-colors">THE QUANTUM SHIFT: ARCHITECTING NEXT-GEN ENCRYPTION FOR GLOBAL NODES.</h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-xl">Deep dive into the transition from standard RSA to lattice-based cryptography across the NEXOGEN core network infrastructure. Ensuring total data integrity in an era of post-quantum computation.</p>
+<div class="mt-8 flex items-center gap-2 font-label-caps text-label-caps text-secondary-container">
+                                READ PROTOCOL <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
+</div>
+</div>
+</div>
+</article>
+<!-- Sidebar Briefs -->
+<div class="md:col-span-4 flex flex-col gap-gutter">
+<div class="glass-card p-6 rounded h-full flex flex-col">
+<h3 class="font-label-caps text-label-caps text-primary border-b border-white/10 pb-4 mb-6 flex items-center justify-between">
+                            LATEST LOGS
+                            <span class="material-symbols-outlined text-sm" data-icon="history">history</span>
+</h3>
+<div class="space-y-8">
+<!-- Small Brief 1 -->
+<div class="group cursor-pointer">
+<p class="font-code-sm text-code-sm text-outline mb-1">05.11 // INFRA</p>
+<h4 class="font-body-lg text-body-lg font-semibold group-hover:text-secondary-container transition-colors">SINGAPORE DATA NODE ACTIVATION COMPLETE.</h4>
+</div>
+<!-- Small Brief 2 -->
+<div class="group cursor-pointer">
+<p class="font-code-sm text-code-sm text-outline mb-1">05.10 // SYSTEM</p>
+<h4 class="font-body-lg text-body-lg font-semibold group-hover:text-secondary-container transition-colors">PATCH 4.2.1: NEURAL LATENCY OPTIMIZATION.</h4>
+</div>
+<!-- Small Brief 3 -->
+<div class="group cursor-pointer">
+<p class="font-code-sm text-code-sm text-outline mb-1">05.08 // OPS</p>
+<h4 class="font-body-lg text-body-lg font-semibold group-hover:text-secondary-container transition-colors">STRATEGIC ALLIANCE WITH GLOBAL QUANTUM LABS.</h4>
+</div>
+</div>
+<div class="mt-auto pt-8">
+<div class="p-4 bg-primary-container/10 border border-primary-container/30 rounded">
+<p class="font-code-sm text-code-sm text-primary mb-2">SYSTEM ALERT</p>
+<p class="font-body-md text-body-md text-on-surface opacity-80">All services currently operating at peak efficiency. No unauthorized access attempts detected in last 24h cycle.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Secondary Row -->
+<article class="md:col-span-4 group cursor-pointer">
+<div class="glass-card rounded overflow-hidden flex flex-col h-full">
+<div class="h-48 w-full bg-cover bg-center" data-alt="A minimalist abstract visualization of network connections represented by glowing cyan dots and thin, sharp lines on a deep black background. The style is clean, technical, and high-fidelity, following a professional UI aesthetic with a focus on precision and digital interconnectivity." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBTAgdylRYK2VMDprSSxxUdGuNdELuTDspoPbWghnguRLDcLS_FWGPpt77lWbpxQf5x64NpOGBVJpkvIbvDBhXXxeSjoK6x-q76f0aAAG_wYUBAlH3fvZpcnESogqdgIq2idEOrG0EMwnSXYQZ8EMYNKt4glvSTXBWVL_0V0fdOJop4mBD1ckYFYXiOr0GdkuGHvdZ41gKvP1tSiP1e6uYEBrJdJvF_sVKiMxooXyAKRKaohjggxpfskxaJs4qlDrUNeo1z5ExYMgoZ')">
+</div>
+<div class="p-6">
+<p class="font-code-sm text-code-sm text-outline mb-2">NETWORK_DYNAMICS</p>
+<h3 class="font-headline-md text-headline-md text-[20px] mb-4 group-hover:text-secondary-container transition-colors">DECENTRALIZED NODE EXPANSION.</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Exploring the rollout of our new P2P mesh network protocol across European data hubs.</p>
+</div>
+</div>
+</article>
+<article class="md:col-span-4 group cursor-pointer">
+<div class="glass-card rounded overflow-hidden flex flex-col h-full">
+<div class="h-48 w-full bg-cover bg-center" data-alt="Close-up of a futuristic high-tech interface display featuring scrolling code and complex data charts in shades of white and vibrant electric blue against a dark, semi-transparent background. The lighting is soft and ambient with sharp, high-contrast details of the digital elements." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCPhaliTbQo0NdBslg6H3c5W-NBdKqpFEyrLztwfJGVBP1O1SqKvbieDb63h7j1VZheIOgqGbFmWoqdccKz7pvtvZz-xrV8dXkLwy4E8z8mIYHHmzenU501DTNgqOEaeFZwYgDhld2WbGeSTKYP9rLHirrCCeYPuHaHrOI-M_N6WDkuJino0W_QXXEycsw0D_VovjZWR-ojp-Ytd3eHUNYCHEQrBaX-FDS7-FC_lFc0T10zA-KME5yPBAKRjuS4agg5Opwb5JyBOoRJ')">
+</div>
+<div class="p-6">
+<p class="font-code-sm text-code-sm text-outline mb-2">CORE_ALGORITHMS</p>
+<h3 class="font-headline-md text-headline-md text-[20px] mb-4 group-hover:text-secondary-container transition-colors">AI-DRIVEN THREAT DETECTION.</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">How our new proprietary LLM models are identifying zero-day exploits before they manifest.</p>
+</div>
+</div>
+</article>
+<article class="md:col-span-4 group cursor-pointer">
+<div class="glass-card rounded overflow-hidden flex flex-col h-full">
+<div class="h-48 w-full bg-cover bg-center" data-alt="An artistic representation of high-speed light trails in a dark void, with sharp streaks of neon cyan and white cutting through the shadows. The image captures a sense of incredible speed, digital data transmission, and advanced technological movement in a minimalist, high-end tech style." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDu5AZ08bkkiht6f1cajXDVjgPi5JwsXaG5fWfhxEwqPowSesuTE3HXa4fGnc7TYRuKwNwp4LTGb6mZCzl9YA1Cai1ZmsNa1fRjzjrry-JmUzsKB9yKONlvQ5TEAjD9Q2xgS80hES_JalRO1D4BFU-DrAwceiu_ZQmapbXsxtTQmXr5LHQ1_5avOMZq90WramyRPHaGWUPlI1GsHK2MBfzzsQj-fPKQoO28vJkPe6jNooqpXOdoPjY3DBJbs_H1x45r3QwlakdXVzfv')">
+</div>
+<div class="p-6">
+<p class="font-code-sm text-code-sm text-outline mb-2">PERFORMANCE</p>
+<h3 class="font-headline-md text-headline-md text-[20px] mb-4 group-hover:text-secondary-container transition-colors">LATENCY BARRIER BROKEN.</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Breaking down the 0.5ms threshold for trans-continental data packets using sub-sea fiber nodes.</p>
+</div>
+</div>
+</article>
+</div>
+</div>
+</main>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="md:hidden fixed bottom-8 left-1/2 -translate-x-1/2 z-50 flex gap-8 items-center py-4 bg-surface-container-low/40 backdrop-blur-xl rounded-full px-6 border border-white/10 shadow-[0_0_20px_rgba(0,241,254,0.1)]">
+<button class="text-outline opacity-60 hover:scale-110 transition-all duration-300">
+<span class="material-symbols-outlined" data-icon="grid_view">grid_view</span>
+</button>
+<button class="text-secondary-container scale-110 drop-shadow-[0_0_8px_rgba(0,241,254,0.5)]">
+<span class="material-symbols-outlined" data-icon="layers">layers</span>
+</button>
+<button class="text-outline opacity-60 hover:scale-110 transition-all duration-300">
+<span class="material-symbols-outlined" data-icon="hub">hub</span>
+</button>
+<button class="text-outline opacity-60 hover:scale-110 transition-all duration-300">
+<span class="material-symbols-outlined" data-icon="contact_support">contact_support</span>
+</button>
+</nav>
+<!-- Footer -->
+<footer class="w-full py-12 bg-surface-container-lowest border-t border-white/5">
+<div class="flex flex-col md:flex-row justify-between items-center px-margin-mobile md:px-margin-desktop gap-4 max-w-container-max mx-auto">
+<div class="font-display-lg text-on-surface text-2xl tracking-tighter">NEXOGEN</div>
+<div class="flex gap-8">
+<a class="font-code-sm text-code-sm text-on-tertiary-fixed-variant hover:text-primary transition-colors" href="#">SECURITY</a>
+<a class="font-code-sm text-code-sm text-on-tertiary-fixed-variant hover:text-primary transition-colors" href="#">INFRASTRUCTURE</a>
+<a class="font-code-sm text-code-sm text-on-tertiary-fixed-variant hover:text-primary transition-colors" href="#">TERMINAL</a>
+</div>
+<div class="font-body-md text-body-md text-on-surface-variant opacity-60">
+                © 2024 NEXOGEN HOLDINGS LIMITED. ALL PROTOCOLS RESERVED.
+            </div>
+</div>
+</footer>
+<script>
+        // Micro-interaction: Log Ticker random updates
+        const ticker = document.querySelector('.animate-ticker');
+        const logs = [
+            "SCANNING NODES...", 
+            "ENCRYPTION KEY ROTATED...", 
+            "LATENCY OPTIMIZED...", 
+            "UPLINK VERIFIED...", 
+            "PACKET LOSS: 0%...", 
+            "NEURAL SYNC COMPLETED..."
+        ];
+
+        setInterval(() => {
+            if (Math.random() > 0.8) {
+                const randomLog = logs[Math.floor(Math.random() * logs.length)];
+                ticker.textContent += ` [ALERT: ${randomLog}]... `;
+            }
+        }, 5000);
+
+        // Scroll interaction for AppBar blur
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 20) {
+                header.classList.add('bg-background/80');
+            } else {
+                header.classList.remove('bg-background/80');
+            }
+        });
+    </script>
+</body></html>

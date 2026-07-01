@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>NEXOGEN | ECOSYSTEM</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&amp;family=Inter:wght@400;500&amp;family=JetBrains+Mono:wght@500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-container-high": "#292a2a",
+                    "on-primary-container": "#f8f7ff",
+                    "on-secondary-container": "#006a70",
+                    "surface-tint": "#b3c5ff",
+                    "secondary": "#ddfcff",
+                    "error-container": "#93000a",
+                    "tertiary": "#c9c6c5",
+                    "on-primary": "#002b75",
+                    "on-secondary-fixed": "#002022",
+                    "on-primary-fixed": "#001849",
+                    "on-surface-variant": "#c2c6d8",
+                    "on-tertiary-container": "#faf7f6",
+                    "secondary-fixed": "#74f5ff",
+                    "outline-variant": "#424656",
+                    "on-tertiary-fixed-variant": "#474646",
+                    "primary": "#b3c5ff",
+                    "tertiary-fixed": "#e5e2e1",
+                    "on-error-container": "#ffdad6",
+                    "primary-container": "#0066ff",
+                    "tertiary-fixed-dim": "#c9c6c5",
+                    "error": "#ffb4ab",
+                    "on-tertiary": "#313030",
+                    "inverse-surface": "#e3e2e2",
+                    "surface-container": "#1e2020",
+                    "tertiary-container": "#737171",
+                    "on-surface": "#e3e2e2",
+                    "surface-variant": "#343535",
+                    "secondary-container": "#00f1fe",
+                    "surface-container-low": "#1a1c1c",
+                    "outline": "#8c90a1",
+                    "background": "#121414",
+                    "on-background": "#e3e2e2",
+                    "surface-dim": "#121414",
+                    "surface-container-lowest": "#0d0e0f",
+                    "surface-bright": "#383939",
+                    "on-tertiary-fixed": "#1c1b1b",
+                    "primary-fixed-dim": "#b3c5ff",
+                    "on-error": "#690005",
+                    "on-secondary-fixed-variant": "#004f54",
+                    "inverse-on-surface": "#2f3131",
+                    "surface-container-highest": "#343535",
+                    "primary-fixed": "#dae1ff",
+                    "inverse-primary": "#0054d6",
+                    "secondary-fixed-dim": "#00dbe7",
+                    "surface": "#121414",
+                    "on-primary-fixed-variant": "#003fa4",
+                    "on-secondary": "#00363a"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "margin-mobile": "20px",
+                    "container-max": "1440px",
+                    "gutter": "24px",
+                    "unit": "4px",
+                    "margin-desktop": "64px"
+            },
+            "fontFamily": {
+                    "display-lg": ["Sora"],
+                    "headline-md": ["Sora"],
+                    "body-lg": ["Inter"],
+                    "code-sm": ["JetBrains Mono"],
+                    "label-caps": ["JetBrains Mono"],
+                    "body-md": ["Inter"],
+                    "display-lg-mobile": ["Sora"]
+            },
+            "fontSize": {
+                    "display-lg": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "headline-md": ["24px", {"lineHeight": "1.3", "letterSpacing": "0.02em", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "letterSpacing": "0", "fontWeight": "400"}],
+                    "code-sm": ["14px", {"lineHeight": "1.4", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                    "label-caps": ["12px", {"lineHeight": "1.2", "letterSpacing": "0.1em", "fontWeight": "700"}],
+                    "body-md": ["16px", {"lineHeight": "1.5", "letterSpacing": "0", "fontWeight": "400"}],
+                    "display-lg-mobile": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            background-color: #050505;
+            color: #e3e2e2;
+            overflow-x: hidden;
+        }
+
+        .glass-card {
+            background: rgba(0, 0, 0, 0.4);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .glass-card:hover {
+            border-color: rgba(0, 241, 254, 0.4);
+            box-shadow: 0 0 30px rgba(0, 241, 254, 0.1);
+            transform: translateY(-4px);
+        }
+
+        .cyber-glow {
+            text-shadow: 0 0 8px rgba(0, 241, 254, 0.5);
+        }
+
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        .scan-line {
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #00f1fe, transparent);
+            position: absolute;
+            top: 0;
+            left: 0;
+            animation: scan 4s linear infinite;
+            opacity: 0.5;
+        }
+
+        @keyframes scan {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(400px); }
+        }
+
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="font-body-md selection:bg-secondary-container/30">
+<!-- TopAppBar Shell -->
+<header class="fixed top-0 w-full z-50 bg-background/40 backdrop-blur-md border-b border-white/10 h-16">
+<div class="flex justify-between items-center px-margin-mobile md:px-margin-desktop h-full w-full max-w-container-max mx-auto">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary" data-icon="terminal">terminal</span>
+<h1 class="font-display-lg text-display-lg-mobile md:text-display-lg tracking-tighter text-on-background">NEXOGEN</h1>
+</div>
+<div class="hidden md:flex gap-8 items-center">
+<nav class="flex gap-6">
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-secondary-container transition-colors duration-300" href="#">SECURITY</a>
+<a class="font-label-caps text-label-caps text-secondary drop-shadow-[0_0_8px_rgba(0,241,254,0.5)]" href="#">ECOSYSTEM</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-secondary-container transition-colors duration-300" href="#">TERMINAL</a>
+</nav>
+</div>
+<div class="flex items-center">
+<span class="font-label-caps text-label-caps text-primary bg-primary-container/10 px-3 py-1 border border-primary/20">SYSTEM: ONLINE</span>
+</div>
+</div>
+</header>
+<main class="pt-32 pb-40 min-h-screen relative overflow-hidden">
+<!-- Background Animation -->
+<div class="absolute inset-0 z-0 opacity-40">
+
+</div>
+<div class="relative z-10 max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<!-- Breadcrumb / Section Label -->
+<div class="flex items-center gap-4 mb-8">
+<div class="h-[1px] w-12 bg-secondary-container/50"></div>
+<h2 class="font-label-caps text-label-caps text-secondary-container tracking-[0.2em]">THE ECOSYSTEM</h2>
+</div>
+<!-- Main Display Typography -->
+<div class="mb-16 max-w-2xl">
+<h3 class="font-display-lg text-display-lg-mobile md:text-display-lg text-on-background mb-6 leading-none">
+                    Multi-Vector <br/><span class="text-secondary-container cyber-glow">Intelligence Architecture</span>
+</h3>
+<p class="font-body-lg text-body-lg text-on-surface-variant">
+                    Navigating the nexus of computational evolution. Our infrastructure enables autonomous orchestration across distributed neural nodes.
+                </p>
+</div>
+<!-- Horizontal Scroll Cards -->
+<div class="relative group">
+<div class="flex gap-6 overflow-x-auto no-scrollbar pb-12 snap-x snap-mandatory">
+<!-- Card 1: Neural Infrastructure -->
+<div class="flex-shrink-0 w-[320px] md:w-[420px] glass-card p-8 rounded-lg snap-start relative overflow-hidden group/card">
+<div class="scan-line group-hover/card:opacity-80"></div>
+<div class="flex justify-between items-start mb-12">
+<span class="material-symbols-outlined text-secondary-container text-4xl" data-icon="hub">hub</span>
+<div class="flex items-center gap-2">
+<div class="w-2 h-2 rounded-full bg-secondary-container animate-pulse"></div>
+<span class="font-code-sm text-code-sm text-secondary-container uppercase">OPERATIONAL</span>
+</div>
+</div>
+<div class="mt-auto">
+<span class="font-code-sm text-code-sm text-outline mb-2 block">MODULE_01</span>
+<h4 class="font-headline-md text-headline-md text-on-background mb-4">NEURAL INFRASTRUCTURE</h4>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">Distributed compute layer optimized for low-latency synpatic bridging across global data centers.</p>
+<button class="w-full py-4 border border-secondary-container text-secondary-container font-label-caps text-label-caps hover:bg-secondary-container hover:text-on-secondary transition-all">
+                                ACCESS PROTOCOL
+                            </button>
+</div>
+</div>
+<!-- Card 2: Synthetic Intelligence -->
+<div class="flex-shrink-0 w-[320px] md:w-[420px] glass-card p-8 rounded-lg snap-start relative overflow-hidden group/card">
+<div class="scan-line group-hover/card:opacity-80" style="animation-delay: 1.5s;"></div>
+<div class="flex justify-between items-start mb-12">
+<span class="material-symbols-outlined text-secondary-container text-4xl" data-icon="memory">memory</span>
+<div class="flex items-center gap-2">
+<div class="w-2 h-2 rounded-full bg-secondary-container animate-pulse"></div>
+<span class="font-code-sm text-code-sm text-secondary-container uppercase">ACTIVE_CORE</span>
+</div>
+</div>
+<div class="mt-auto">
+<span class="font-code-sm text-code-sm text-outline mb-2 block">MODULE_02</span>
+<h4 class="font-headline-md text-headline-md text-on-background mb-4">SYNTHETIC INTELLIGENCE</h4>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">Advanced generative kernels capable of autonomous problem-solving and dynamic environment adaptation.</p>
+<button class="w-full py-4 border border-secondary-container text-secondary-container font-label-caps text-label-caps hover:bg-secondary-container hover:text-on-secondary transition-all">
+                                INITIALIZE KERNEL
+                            </button>
+</div>
+</div>
+<!-- Card 3: Autonomous Deployment -->
+<div class="flex-shrink-0 w-[320px] md:w-[420px] glass-card p-8 rounded-lg snap-start relative overflow-hidden group/card">
+<div class="scan-line group-hover/card:opacity-80" style="animation-delay: 3s;"></div>
+<div class="flex justify-between items-start mb-12">
+<span class="material-symbols-outlined text-secondary-container text-4xl" data-icon="rocket_launch">rocket_launch</span>
+<div class="flex items-center gap-2">
+<div class="w-2 h-2 rounded-full bg-primary animate-pulse"></div>
+<span class="font-code-sm text-code-sm text-primary uppercase">SYNCING</span>
+</div>
+</div>
+<div class="mt-auto">
+<span class="font-code-sm text-code-sm text-outline mb-2 block">MODULE_03</span>
+<h4 class="font-headline-md text-headline-md text-on-background mb-4">AUTONOMOUS DEPLOYMENT</h4>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">Self-healing delivery systems that ensure protocol integrity across edge-compute instances.</p>
+<button class="w-full py-4 border border-secondary-container text-secondary-container font-label-caps text-label-caps hover:bg-secondary-container hover:text-on-secondary transition-all">
+                                VIEW LOGS
+                            </button>
+</div>
+</div>
+</div>
+<!-- Scroll Indicators -->
+<div class="mt-8 flex items-center gap-4">
+<button class="p-2 border border-white/10 hover:border-secondary-container transition-colors group">
+<span class="material-symbols-outlined text-on-surface-variant group-hover:text-secondary-container" data-icon="chevron_left">chevron_left</span>
+</button>
+<div class="h-[2px] flex-grow bg-white/10">
+<div class="h-full w-1/3 bg-secondary-container shadow-[0_0_10px_rgba(0,241,254,0.5)]"></div>
+</div>
+<button class="p-2 border border-white/10 hover:border-secondary-container transition-colors group">
+<span class="material-symbols-outlined text-on-surface-variant group-hover:text-secondary-container" data-icon="chevron_right">chevron_right</span>
+</button>
+</div>
+</div>
+<!-- Bento Preview Section -->
+<div class="mt-32 grid grid-cols-1 md:grid-cols-3 gap-6">
+<div class="md:col-span-2 glass-card rounded-lg p-8 relative overflow-hidden group">
+<div class="absolute right-0 bottom-0 w-64 h-64 opacity-20 pointer-events-none translate-x-12 translate-y-12">
+<span class="material-symbols-outlined text-[200px] text-secondary-container" data-icon="settings_input_component">settings_input_component</span>
+</div>
+<h5 class="font-label-caps text-label-caps text-primary mb-2">INFRASTRUCTURE HEALTH</h5>
+<div class="text-4xl font-display-lg text-on-background mb-8">99.98% <span class="text-body-lg font-normal text-outline">Uptime</span></div>
+<div class="flex gap-2 mb-4">
+<div class="h-1 bg-secondary-container flex-grow"></div>
+<div class="h-1 bg-secondary-container flex-grow"></div>
+<div class="h-1 bg-secondary-container flex-grow"></div>
+<div class="h-1 bg-secondary-container flex-grow"></div>
+<div class="h-1 bg-secondary-container flex-grow opacity-30"></div>
+</div>
+<p class="text-on-surface-variant font-code-sm">Real-time telemetry from 1,248 active edge nodes across 4 major regions.</p>
+</div>
+<div class="glass-card rounded-lg p-8 bg-primary-container/5 border-primary/20">
+<h5 class="font-label-caps text-label-caps text-primary mb-4">THREAT DETECTION</h5>
+<div class="space-y-4">
+<div class="flex justify-between text-code-sm">
+<span class="text-outline">IP_PROXY:</span>
+<span class="text-on-background">ENCRYPTED</span>
+</div>
+<div class="flex justify-between text-code-sm">
+<span class="text-outline">SCAN_STATUS:</span>
+<span class="text-secondary-container">CLEAN</span>
+</div>
+<div class="flex justify-between text-code-sm">
+<span class="text-outline">LATENCY:</span>
+<span class="text-on-background">12ms</span>
+</div>
+</div>
+<div class="mt-8 pt-8 border-t border-white/10">
+<img class="w-full h-24 object-contain opacity-50 grayscale hover:grayscale-0 transition-all duration-700" data-alt="A futuristic circular technical diagram showing data flowing between nodes in a neon cyan and deep space black color scheme, sleek UI aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBwFxV9kCz58GJtVacEA-CcL4URlCZ9diP4fjI6PVCzCFiGScSmoHePkGbFJviGYOyhYO2D-rIDDxpCFfWBTWcJDf6U1ujqY2_d-89tytHYu7SHR_0N9TcFjB-SEvbHKymlxm9arLyrWeG0XOATUnUQRBOYlk5GfX39PuH9xwyK7Lc2EzFYJtksl3COb41PUlVUH5zWZZkQufcXgGL5DZpD28P-QoiqmAYwRIEAYmjgOqcwg4N8HnY3SZ0G1QcbbBcq20KD0OGZ1vD3"/>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- BottomNavBar Shell (Mobile Only) -->
+<nav class="md:hidden fixed bottom-8 left-1/2 -translate-x-1/2 z-50 flex gap-8 items-center py-4 bg-surface-container-low/40 backdrop-blur-xl rounded-full px-6 border border-white/10 shadow-2xl">
+<a class="text-outline opacity-60 hover:scale-110 hover:opacity-100 transition-all duration-300" href="#">
+<span class="material-symbols-outlined" data-icon="grid_view">grid_view</span>
+</a>
+<a class="text-secondary-container scale-110 drop-shadow-[0_0_8px_rgba(0,241,254,0.5)]" href="#">
+<span class="material-symbols-outlined" data-icon="layers">layers</span>
+</a>
+<a class="text-outline opacity-60 hover:scale-110 hover:opacity-100 transition-all duration-300" href="#">
+<span class="material-symbols-outlined" data-icon="hub">hub</span>
+</a>
+<a class="text-outline opacity-60 hover:scale-110 hover:opacity-100 transition-all duration-300" href="#">
+<span class="material-symbols-outlined" data-icon="contact_support">contact_support</span>
+</a>
+</nav>
+<!-- Footer Shell -->
+<footer class="w-full py-12 bg-surface-container-lowest border-t border-white/5 relative z-10">
+<div class="flex flex-col md:flex-row justify-between items-center px-margin-mobile md:px-margin-desktop gap-4 w-full max-w-container-max mx-auto">
+<div class="flex items-center gap-4">
+<span class="font-display-lg text-on-surface text-xl">NEXOGEN</span>
+<span class="text-on-surface-variant font-code-sm border-l border-white/10 pl-4">© 2024 HOLDINGS LIMITED</span>
+</div>
+<div class="flex gap-8">
+<a class="font-code-sm text-code-sm text-on-tertiary-fixed-variant hover:text-primary transition-colors" href="#">SECURITY</a>
+<a class="font-code-sm text-code-sm text-on-tertiary-fixed-variant hover:text-primary transition-colors" href="#">INFRASTRUCTURE</a>
+<a class="font-code-sm text-code-sm text-on-tertiary-fixed-variant hover:text-primary transition-colors" href="#">TERMINAL</a>
+</div>
+</div>
+</footer>
+<script>
+        // Simple scroll interaction for cards
+        const scrollContainer = document.querySelector('.no-scrollbar');
+        const scrollIndicators = document.querySelectorAll('.h-full.w-1\/3');
+        
+        scrollContainer.addEventListener('scroll', () => {
+            const scrollPercentage = scrollContainer.scrollLeft / (scrollContainer.scrollWidth - scrollContainer.clientWidth);
+            if (scrollIndicators.length > 0) {
+                scrollIndicators[0].style.transform = `translateX(${scrollPercentage * 200}%)`;
+            }
+        });
+
+        // Ambient micro-interaction: update system time
+        function updateSystemStatus() {
+            const statusText = document.querySelector('.trailing-action-text'); // If we had one in header
+            // Random jitter for simulation
+        }
+        setInterval(updateSystemStatus, 5000);
+    </script>
+</body></html>
