@@ -67,6 +67,13 @@ function ScrollRevealDivider({
   );
 }
 
+/** Attribution fades in quickly and holds at full opacity before scroll ends. */
+function attributionRange(dividerIndex: number): [number, number] {
+  const [dividerStart] = stepRange(dividerIndex);
+  const fadeSpan = (1 - dividerStart) * 0.35;
+  return [dividerStart, dividerStart + fadeSpan];
+}
+
 function ScrollRevealAttribution({
   progress,
   range,
@@ -78,8 +85,17 @@ function ScrollRevealAttribution({
   children: React.ReactNode;
   className?: string;
 }) {
-  const opacity = useTransform(progress, range, [0, 1], { clamp: true });
-  const y = useTransform(progress, range, [8, 0], { clamp: true });
+  const [fadeStart, fadeEnd] = range;
+  const snapPoint = fadeStart + (fadeEnd - fadeStart) * 0.4;
+  const opacity = useTransform(
+    progress,
+    [fadeStart, snapPoint, fadeEnd],
+    [0, 1, 1],
+    { clamp: true },
+  );
+  const y = useTransform(progress, [fadeStart, snapPoint], [8, 0], {
+    clamp: true,
+  });
 
   return (
     <motion.p style={{ opacity, y }} className={className}>
@@ -154,7 +170,7 @@ export function Vision() {
             />
             <ScrollRevealAttribution
               progress={scrollYProgress}
-              range={stepRange(sequence.length + 1)}
+              range={attributionRange(sequence.length)}
               className="font-mono mt-10 text-sm text-[#8899AA]"
             >
               — Arthur Chukwurah, Founder &amp; CEO
