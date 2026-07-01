@@ -8,7 +8,7 @@ import { cn } from "@/lib/utils";
 const products: ProductData[] = [
   {
     id: "trvrse",
-    name: "tRVRSE",
+    name: "Trvrse",
     subtitle: "Cross-Border Fintech Wallet",
     status: "live",
     bg: "linear-gradient(135deg, #0A1628 0%, #0d1f3c 50%, #0A1628 100%)",
@@ -16,7 +16,7 @@ const products: ProductData[] = [
     chips: ["80+ Countries", "Live FX Rates", "Virtual Cards"],
     link: "#contact",
     phone: true,
-    icon: <TrvrseLogo size={44} blend />,
+    icon: <TrvrseLogo size={48} blend />,
   },
   {
     id: "edunova",
