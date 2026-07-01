@@ -8,7 +8,7 @@ import { cn } from "@/lib/utils";
 const products: ProductData[] = [
   {
     id: "trvrse",
-    name: "tRVRSE",
+    name: "TRVRSE",
     subtitle: "Cross-Border Fintech Wallet",
     description: "Direct international transfers — instant and seamless.",
     status: "live",

@@ -7,7 +7,7 @@ import { TrvrseLogo } from "@/components/ui/TrvrseLogo";
 const pipeline = [
   {
     status: "Live",
-    name: "Trvrse",
+    name: "TRVRSE",
     detail: "Cross-border fintech wallet — our flagship in market.",
     accent: "#2D7DD2",
   },
@@ -58,7 +58,7 @@ export function Pipeline() {
               className="font-body mt-6 max-w-md text-base leading-relaxed text-[#8899AA]"
             >
               Nexogen is a holding company built to launch, scale, and compound products
-              across Africa and the world. Trvrse is live. The rest of the stack is loading.
+              across Africa and the world. TRVRSE is live. The rest of the stack is loading.
             </motion.p>
             <motion.div
               initial={{ opacity: 0 }}
@@ -68,7 +68,7 @@ export function Pipeline() {
             >
               <TrvrseLogo size={40} />
               <p className="font-mono text-[10px] tracking-[0.15em] text-[#8899AA] uppercase">
-                Flagship · Trvrse
+                Flagship · TRVRSE
               </p>
             </motion.div>
           </div>
@@ -96,7 +96,7 @@ export function Pipeline() {
                     </h3>
                     <p className="font-body mt-2 text-sm text-[#8899AA]">{item.detail}</p>
                   </div>
-                  {item.name === "Trvrse" && <TrvrseLogo size={36} className="shrink-0" />}
+                  {item.name === "TRVRSE" && <TrvrseLogo size={36} className="shrink-0" />}
                 </div>
               </motion.article>
             ))}
