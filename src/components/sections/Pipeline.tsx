@@ -57,7 +57,7 @@ export function Pipeline() {
               transition={{ delay: 0.1 }}
               className="font-body mt-6 max-w-md text-base leading-relaxed text-[#8899AA]"
             >
-              Nexogen is a holding company built to launch, scale, and compound products
+              Nexogen Group is built to launch, scale, and compound products
               across Africa and the world. TRVRSE is live. The rest of the stack is loading.
             </motion.p>
             <motion.div
@@ -119,7 +119,7 @@ export function Pipeline() {
             </p>
           </div>
           <a
-            href="mailto:arthur@nexxogenn.com?subject=Enquiry%20from%20Nexogen%20Holdings%20website"
+            href="mailto:arthur@nexxogenn.com?subject=Enquiry%20from%20Nexogen%20Group%20website"
             className="font-body shrink-0 rounded-full bg-[#2D7DD2] px-8 py-3.5 text-sm text-white transition-shadow hover:shadow-[0_0_30px_rgba(45,125,210,0.35)]"
             data-cursor-label="Contact"
           >

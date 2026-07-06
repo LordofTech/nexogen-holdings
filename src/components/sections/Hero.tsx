@@ -60,7 +60,7 @@ export function Hero() {
             transition={{ delay: 0.5, duration: 0.4 }}
             className="font-body mt-8 max-w-[480px] text-lg text-[#8899AA]"
           >
-            Nexogen Holdings is a technology company born in Lagos, building world-class software
+            Nexogen Group is a technology company born in Lagos, building world-class software
             that moves people, money, and knowledge without borders.
           </motion.p>
 

@@ -58,7 +58,7 @@ export function Nav() {
           </ul>
 
           <a
-            href="mailto:arthur@nexxogenn.com?subject=Enquiry%20from%20Nexogen%20Holdings%20website"
+            href="mailto:arthur@nexxogenn.com?subject=Enquiry%20from%20Nexogen%20Group%20website"
             className="font-body hidden rounded-full border border-[#2D7DD2] px-5 py-2.5 text-[13px] text-[#2D7DD2] transition-all hover:bg-[#2D7DD2] hover:text-white hover:shadow-[0_0_20px_rgba(45,125,210,0.4)] md:inline-block"
             data-cursor-label="Contact"
           >

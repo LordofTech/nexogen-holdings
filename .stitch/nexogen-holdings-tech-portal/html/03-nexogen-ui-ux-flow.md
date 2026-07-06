@@ -1,4 +1,4 @@
-# Nexogen Holdings Limited - UI/UX Architecture
+# Nexogen Group Limited - UI/UX Architecture
 
 ## 1. Concept: "The Synthetic Intelligence Framework"
 A design language that balances high-utility terminal aesthetics with premium consumer luxury.

@@ -3,11 +3,11 @@ import { GeistMono } from "geist/font/mono";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Nexogen Holdings Limited | We Build Futures",
+  title: "Nexogen Group Limited | We Build Futures",
   description:
-    "Nigerian-born global technology holding company building world-class software across Fintech, Edutech, GovTech, and Hardware. Home of Trvrse.",
+    "Nigerian-born global technology group building world-class software across Fintech, Edutech, GovTech, and Hardware. Home of Trvrse.",
   keywords: [
-    "Nexogen Holdings",
+    "Nexogen Group",
     "Trvrse",
     "Fintech",
     "Edutech",
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     "Lagos",
   ],
   openGraph: {
-    title: "Nexogen Holdings Limited",
+    title: "Nexogen Group Limited",
     description: "We Don't Build Apps. We Build Futures.",
     type: "website",
   },

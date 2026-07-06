@@ -19,7 +19,7 @@ export function Founder() {
         >
           <Image
             src="/assets/Me As CEO.jpeg"
-            alt="Arthur Chukwurah, Founder and CEO of Nexogen Holdings"
+            alt="Arthur Chukwurah, Founder and CEO of Nexogen Group"
             fill
             className="object-cover object-top"
             sizes="(max-width: 1024px) 100vw, 50vw"
@@ -42,7 +42,7 @@ export function Founder() {
           <h2 className="font-display mt-4 text-5xl font-bold text-white">Built by a builder.</h2>
           <p className="font-body mt-6 text-base leading-relaxed text-[#8899AA]">
             Arthur Chukwurah is a full-stack software engineer, product designer, and technology
-            entrepreneur from Nigeria. He founded Nexogen Holdings with one belief — that the best
+            entrepreneur from Nigeria. He founded Nexogen Group with one belief — that the best
             African technology products have not been built yet. He is building them.
           </p>
 

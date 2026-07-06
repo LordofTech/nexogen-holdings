@@ -1,4 +1,4 @@
-# Nexogen Holdings Tech Portal
+# Nexogen Group Tech Portal
 
 Project ID: `12369773356667041094`
 Exported: 2026-07-01T01:20:21.472Z

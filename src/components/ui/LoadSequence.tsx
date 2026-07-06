@@ -74,7 +74,7 @@ export function LoadSequence({
               animate={{ opacity: 1 }}
               transition={{ delay: 0.55 }}
             >
-              Holdings Limited
+              Group Limited
             </motion.p>
             <button
               type="button"

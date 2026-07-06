@@ -7,7 +7,7 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const rootDir = path.resolve(__dirname, "..");
 
 const PROJECT_ID = "12369773356667041094";
-const PROJECT_TITLE = "Nexogen Holdings Tech Portal";
+const PROJECT_TITLE = "Nexogen Group Tech Portal";
 const DESIGN_SYSTEM_ASSET_ID = "02174d1f084949cea296207efc02a924";
 
 const SCREENS = [
