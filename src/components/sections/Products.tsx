@@ -17,7 +17,7 @@ const products: ProductData[] = [
     chips: ["80+ Countries", "Live FX Rates", "Virtual Cards"],
     link: "#contact",
     phone: true,
-    icon: <TrvrseLogo size={48} blend />,
+    icon: <TrvrseLogo size={48} />,
   },
   {
     id: "edunova",

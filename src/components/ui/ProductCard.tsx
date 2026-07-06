@@ -121,7 +121,7 @@ function TrvrsePhone() {
     >
       <div className="rounded-[2rem] border-2 border-[#1A1A1A]/80 bg-black/60 p-1.5 shadow-2xl backdrop-blur-sm">
         <div className="rounded-[1.6rem] bg-[#0A1628]/95 p-4">
-          <TrvrseLogo size={32} blend />
+          <TrvrseLogo size={36} />
           <p className="font-display mt-3 text-lg font-bold text-white">₦2.45M</p>
           <p className="font-mono text-[8px] text-[#06D6A0]">≈ $1,633 USD</p>
           <div className="mt-3 rounded-lg border border-[#2D7DD2]/30 bg-gradient-to-br from-[#1a2a4a] to-[#0A1628] p-2">

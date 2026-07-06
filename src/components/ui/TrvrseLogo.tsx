@@ -1,6 +1,8 @@
 import Image from "next/image";
 import { cn } from "@/lib/utils";
 
+const LOGO_SRC = "/assets/trvrse-logo.png";
+
 export function TrvrseLogo({
   className = "",
   size = 48,
@@ -12,36 +14,17 @@ export function TrvrseLogo({
   variant?: "mark" | "lockup" | "png";
   blend?: boolean;
 }) {
-  const usePng = variant === "png" || variant === "mark";
-
-  if (usePng) {
-    return (
-      <Image
-        src="/assets/trvrse-logomark.png"
-        alt="Trvrse"
-        width={size}
-        height={size}
-        className={cn(
-          "object-contain",
-          blend && "mix-blend-lighten",
-          className
-        )}
-        priority={false}
-      />
-    );
-  }
-
-  const src = "/branding/trvrse-horizontal-lockup.svg";
-  const width = size * 3.2;
+  // Stacked lockup PNG (icon + wordmark) — square aspect for all variants
+  const width = variant === "lockup" ? Math.round(size * 1.05) : size;
   const height = size;
 
   return (
     <Image
-      src={src}
+      src={LOGO_SRC}
       alt="Trvrse"
       width={width}
       height={height}
-      className={cn("object-contain", className)}
+      className={cn("object-contain", blend && "mix-blend-lighten", className)}
       priority={false}
     />
   );
