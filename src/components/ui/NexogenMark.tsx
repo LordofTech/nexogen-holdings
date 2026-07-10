@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
 import { COMPANY_NAME } from "@/lib/site";
 
-const logoClass = "w-auto object-contain mix-blend-lighten";
+const logoClass = "w-auto object-contain logo-blend";
 
 export function NexogenMark({
   className = "",
@@ -66,3 +66,4 @@ export function NexogenMarkAnimated({
     </motion.div>
   );
 }
+

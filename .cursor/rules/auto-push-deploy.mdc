@@ -1,5 +1,5 @@
 ---
-description: After any local code change, commit and push to GitHub so Vercel auto-deploys
+description: Automatically commit and push every completed code change to GitHub so Vercel auto-deploys without waiting for a prompt
 alwaysApply: true
 ---
 
@@ -10,25 +10,31 @@ This workspace is connected to **GitHub** and **Vercel**. Every code change must
 ## Required workflow after making changes
 
 1. **Commit** all relevant changes with a clear, concise message.
-2. **Push** to the `main` branch on GitHub (`git push origin main`).
-3. **Confirm** the push succeeded (`git status` should show clean and up to date).
+2. **Push** to the main branch on GitHub (git push origin main).
+3. **Confirm** the push succeeded (git status should show clean and up to date).
 
-Do this at the end of every task that modifies project files — do not leave changes only on disk.
+Do this automatically at the end of every task that modifies project files � do not wait for the user to ask for a push.
+
+## No-prompt policy
+
+- After successful edits, run commit + push workflow automatically.
+- Do not ask for push confirmation unless a safety issue blocks push (merge conflict, auth failure, protected branch, or failing policy).
 
 ## Vercel deployment
 
-- Vercel is linked to this repo and deploys automatically on every push to `main`.
-- Do **not** run `npx convex deploy` or production deploy commands unless the user explicitly asks.
+- Vercel is linked to this repo and deploys automatically on every push to main.
+- Do **not** run 
+px convex deploy or production deploy commands unless the user explicitly asks.
 - For this Next.js site, pushing to GitHub is sufficient; Vercel handles the build and deploy.
 
 ## Git safety
 
-- Never force-push to `main`.
-- Never commit `.env`, `.env.local`, or files containing secrets.
+- Never force-push to main.
+- Never commit .env, .env.local, or files containing secrets.
 - Only create commits when there are actual changes to commit.
 
 ## Remote
 
-- **GitHub:** https://github.com/LordofTech/nexogen-holdings (`origin` → `main`)
+- **GitHub:** https://github.com/LordofTech/nexogen-holdings (origin ? main)
 - **Vercel production:** https://nexogen-holdings.vercel.app
 - **Vercel dashboard:** https://vercel.com/arthur-6246s-projects/nexogen-holdings
