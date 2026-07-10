@@ -1,7 +1,7 @@
 "use client";
 
 import { NexogenMark } from "@/components/ui/NexogenMark";
-import { CONTACT_EMAIL, contactMailto } from "@/lib/site";
+import { contactMailto } from "@/lib/site";
 
 const footerLinks = ["About", "Products", "Vision", "Pipeline", "Contact"];
 
@@ -34,7 +34,7 @@ export function Footer() {
         </div>
         <div className="font-mono mt-16 flex flex-wrap justify-center gap-8 text-xs text-[#B8A882]">
           <a href={contactMailto()} className="hover:text-white">
-            {CONTACT_EMAIL}
+            Email Us
           </a>
           <span>Lagos, Nigeria</span>
         </div>

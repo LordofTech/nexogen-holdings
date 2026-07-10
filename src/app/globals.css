@@ -94,23 +94,11 @@ body {
 }
 .logo-blend {
   mix-blend-mode: screen;
-  filter: brightness(1.2) contrast(1.28) saturate(1.02)
-    drop-shadow(0 0 0.65px rgba(229, 203, 138, 0.42));
+  filter: brightness(1.26) contrast(1.36) saturate(1.08)
+    drop-shadow(0 0 0.75px rgba(229, 203, 138, 0.5));
   opacity: 1;
-  -webkit-mask-image: radial-gradient(
-    ellipse 150% 135% at center,
-    #000 62%,
-    rgba(0, 0, 0, 0.95) 74%,
-    rgba(0, 0, 0, 0.6) 86%,
-    transparent 100%
-  );
-  mask-image: radial-gradient(
-    ellipse 150% 135% at center,
-    #000 62%,
-    rgba(0, 0, 0, 0.95) 74%,
-    rgba(0, 0, 0, 0.6) 86%,
-    transparent 100%
-  );
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
 }
 
 .glass {

@@ -22,10 +22,12 @@ export function NexogenMark({
     <Image
       src="/assets/nexogen-logo.png"
       alt={COMPANY_NAME}
-      width={Math.round(h * 1.15)}
+      width={Math.round(h * 1.8)}
       height={h}
       className={cn(logoClass, className)}
       style={{ height: h, width: "auto" }}
+      sizes="(max-width: 768px) 120px, 180px"
+      quality={100}
       priority
     />
   );
@@ -57,10 +59,12 @@ export function NexogenMarkAnimated({
       <Image
         src="/assets/nexogen-logo.png"
         alt={COMPANY_NAME}
-        width={Math.round(h * 1.15)}
+        width={Math.round(h * 1.8)}
         height={h}
         className={cn(logoClass, className)}
         style={{ height: h, width: "auto" }}
+        sizes="(max-width: 768px) 200px, 420px"
+        quality={100}
         priority
       />
     </motion.div>
