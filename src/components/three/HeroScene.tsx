@@ -25,12 +25,12 @@ function HeroShape({ mouse }: { mouse: React.MutableRefObject<{ x: number; y: nu
     <group ref={group}>
       <mesh>
         <icosahedronGeometry args={[1.6, 1]} />
-        <meshBasicMaterial color="#2D7DD2" wireframe transparent opacity={0.85} />
+        <meshBasicMaterial color="#D4AF37" wireframe transparent opacity={0.85} />
       </mesh>
       <mesh rotation={[Math.PI / 3, 0, Math.PI / 4]}>
         <torusGeometry args={[2.2, 0.02, 16, 80]} />
-        <meshBasicMaterial color="#2D7DD2" transparent opacity={0.5} />
-        <Edges color="#06D6A0" threshold={15} />
+        <meshBasicMaterial color="#D4AF37" transparent opacity={0.5} />
+        <Edges color="#F0D080" threshold={15} />
       </mesh>
     </group>
   );

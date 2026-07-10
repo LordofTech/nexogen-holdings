@@ -51,7 +51,7 @@ export function LoadSequence({
             <button
               type="button"
               onClick={dismiss}
-              className="font-mono pointer-events-auto absolute bottom-8 right-8 text-[10px] tracking-[0.2em] text-[#8899AA] uppercase hover:text-white"
+              className="font-mono pointer-events-auto absolute bottom-8 right-8 text-[10px] tracking-[0.2em] text-[#B8A882] uppercase hover:text-white"
             >
               Skip
             </button>

@@ -47,7 +47,7 @@ export function About() {
     <section id="about" ref={ref} className="relative min-h-screen bg-black py-32">
       <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-16 px-6 lg:grid-cols-[55%_45%] lg:px-10">
         <div>
-          <p className="font-mono text-[10px] tracking-[0.15em] text-[#2D7DD2] uppercase">
+          <p className="font-mono text-[10px] tracking-[0.15em] text-[#D4AF37] uppercase">
             About Nexogen
           </p>
           <motion.h2
@@ -60,7 +60,7 @@ export function About() {
           </motion.h2>
 
           <TextReveal
-            className="font-body mt-6 space-y-4 text-base leading-relaxed text-[#8899AA]"
+            className="font-body mt-6 space-y-4 text-base leading-relaxed text-[#B8A882]"
             delay={0.2}
           >
             {`Nexogen Limited is a technology company born in Lagos, Nigeria. We exist to build the software that Africa's next generation deserves — and the world doesn't yet know it needs.
@@ -79,7 +79,7 @@ We are builders. We ship. We scale. We repeat.`}
                 <p className="font-display text-4xl font-bold text-white md:text-5xl">
                   <CountUp value={stat.num} inView={inView} />
                 </p>
-                <p className="font-body mt-2 text-xs text-[#8899AA]">{stat.label}</p>
+                <p className="font-body mt-2 text-xs text-[#B8A882]">{stat.label}</p>
               </motion.div>
             ))}
           </div>

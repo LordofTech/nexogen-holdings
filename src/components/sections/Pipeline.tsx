@@ -10,19 +10,19 @@ const pipeline = [
     status: "Live",
     name: "TRVRSE",
     detail: "Cross-border fintech wallet — our flagship in market.",
-    accent: "#2D7DD2",
+    accent: "#D4AF37",
   },
   {
     status: "2026",
     name: "Edunova",
     detail: "Education technology for the next generation of African students.",
-    accent: "#06D6A0",
+    accent: "#E8C547",
   },
   {
     status: "2026",
     name: "Civitas",
     detail: "Government technology that makes public services instant and transparent.",
-    accent: "#8899AA",
+    accent: "#B8A882",
   },
   {
     status: "2027+",
@@ -41,7 +41,7 @@ export function Pipeline() {
       <div className="mx-auto max-w-7xl px-6 lg:px-10">
         <div className="grid gap-12 lg:grid-cols-[1fr_1.2fr] lg:items-end">
           <div>
-            <p className="font-mono text-[10px] tracking-[0.15em] text-[#2D7DD2] uppercase">
+            <p className="font-mono text-[10px] tracking-[0.15em] text-[#D4AF37] uppercase">
               What&apos;s Next
             </p>
             <motion.h2
@@ -56,7 +56,7 @@ export function Pipeline() {
               initial={{ opacity: 0, y: 20 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ delay: 0.1 }}
-              className="font-body mt-6 max-w-md text-base leading-relaxed text-[#8899AA]"
+              className="font-body mt-6 max-w-md text-base leading-relaxed text-[#B8A882]"
             >
               Nexogen Limited is built to launch, scale, and compound products
               across Africa and the world. TRVRSE is live. The rest of the stack is loading.
@@ -68,7 +68,7 @@ export function Pipeline() {
               className="mt-8 flex items-center gap-4"
             >
               <TrvrseLogo size={40} />
-              <p className="font-mono text-[10px] tracking-[0.15em] text-[#8899AA] uppercase">
+              <p className="font-mono text-[10px] tracking-[0.15em] text-[#B8A882] uppercase">
                 Flagship · TRVRSE
               </p>
             </motion.div>
@@ -81,7 +81,7 @@ export function Pipeline() {
                 initial={{ opacity: 0, x: 24 }}
                 animate={inView ? { opacity: 1, x: 0 } : {}}
                 transition={{ delay: 0.15 + i * 0.08, type: "spring", stiffness: 100, damping: 22 }}
-                className="group rounded-2xl border border-[#1A1A1A] bg-[#0A0A0A] p-6 transition-all hover:border-[#2D7DD2]/40 hover:shadow-[0_16px_48px_rgba(45,125,210,0.1)]"
+                className="group rounded-2xl border border-[#1A1A1A] bg-[#0A0A0A] p-6 transition-all hover:border-[#D4AF37]/40 hover:shadow-[0_16px_48px_rgba(212,175,55,0.1)]"
                 data-cursor-label="View"
               >
                 <div className="flex items-start justify-between gap-4">
@@ -95,7 +95,7 @@ export function Pipeline() {
                     <h3 className="font-display mt-2 text-xl font-semibold text-white">
                       {item.name}
                     </h3>
-                    <p className="font-body mt-2 text-sm text-[#8899AA]">{item.detail}</p>
+                    <p className="font-body mt-2 text-sm text-[#B8A882]">{item.detail}</p>
                   </div>
                   {item.name === "TRVRSE" && <TrvrseLogo size={36} className="shrink-0" />}
                 </div>
@@ -114,14 +114,14 @@ export function Pipeline() {
             <p className="font-display text-2xl font-bold text-white">
               Partner with Nexogen
             </p>
-            <p className="font-body mt-2 max-w-lg text-sm text-[#8899AA]">
+            <p className="font-body mt-2 max-w-lg text-sm text-[#B8A882]">
               Investors, banks, and strategic partners — let&apos;s build infrastructure for
               the next generation together.
             </p>
           </div>
           <a
             href={contactMailto()}
-            className="font-body shrink-0 rounded-full bg-[#2D7DD2] px-8 py-3.5 text-sm text-white transition-shadow hover:shadow-[0_0_30px_rgba(45,125,210,0.35)]"
+            className="font-body shrink-0 rounded-full bg-[#D4AF37] px-8 py-3.5 text-sm text-white transition-shadow hover:shadow-[0_0_30px_rgba(212,175,55,0.35)]"
             data-cursor-label="Contact"
           >
             Start a Conversation

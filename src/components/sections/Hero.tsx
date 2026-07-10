@@ -30,7 +30,7 @@ export function Hero() {
         >
           <motion.span
             variants={fadeUp}
-            className="font-mono inline-block rounded-full border border-[#1A1A1A] bg-[#0A0A0A] px-3 py-1.5 text-[10px] tracking-[0.15em] text-[#8899AA] uppercase"
+            className="font-mono inline-block rounded-full border border-[#1A1A1A] bg-[#0A0A0A] px-3 py-1.5 text-[10px] tracking-[0.15em] text-[#B8A882] uppercase"
           >
             Est. Lagos, Nigeria 2026
           </motion.span>
@@ -58,7 +58,7 @@ export function Hero() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.5, duration: 0.4 }}
-            className="font-body mt-8 max-w-[480px] text-lg text-[#8899AA]"
+            className="font-body mt-8 max-w-[480px] text-lg text-[#B8A882]"
           >
             Nexogen Limited is a technology company born in Lagos, building world-class software
             that moves people, money, and knowledge without borders.
@@ -72,14 +72,14 @@ export function Hero() {
           >
             <a
               href="#products"
-              className="font-body flex h-[52px] items-center rounded-full bg-[#2D7DD2] px-8 text-sm text-white transition-shadow hover:shadow-[0_0_30px_rgba(45,125,210,0.35)]"
+              className="font-body flex h-[52px] items-center rounded-full bg-[#D4AF37] px-8 text-sm text-white transition-shadow hover:shadow-[0_0_30px_rgba(212,175,55,0.35)]"
               data-cursor-label="Explore"
             >
               Explore Our Products
             </a>
             <a
               href="#about"
-              className="font-body flex h-[52px] items-center rounded-full border border-[#1A1A1A] px-8 text-sm text-white transition-colors hover:border-[#2D7DD2]"
+              className="font-body flex h-[52px] items-center rounded-full border border-[#1A1A1A] px-8 text-sm text-white transition-colors hover:border-[#D4AF37]"
               data-cursor-label="View"
             >
               Our Story
@@ -103,14 +103,14 @@ export function Hero() {
         transition={{ delay: 0.75 }}
         className="absolute bottom-10 left-1/2 flex -translate-x-1/2 flex-col items-center gap-2"
       >
-        <span className="font-mono text-[10px] tracking-[0.2em] text-[#8899AA] uppercase">
+        <span className="font-mono text-[10px] tracking-[0.2em] text-[#B8A882] uppercase">
           Scroll to explore
         </span>
         <svg
           width="16"
           height="16"
           viewBox="0 0 16 16"
-          className="animate-bounce-chevron text-[#8899AA]"
+          className="animate-bounce-chevron text-[#B8A882]"
         >
           <path d="M4 6 L8 10 L12 6" stroke="currentColor" strokeWidth="1.5" fill="none" />
         </svg>

@@ -126,12 +126,12 @@ export function Vision() {
         className="pointer-events-none absolute inset-0 opacity-20"
         style={{
           background:
-            "radial-gradient(ellipse at 50% 40%, #0a1628 0%, #000000 70%)",
+            "radial-gradient(ellipse at 50% 40%, #141008 0%, #000000 70%)",
         }}
       />
 
       <div className="relative z-10 mx-auto max-w-4xl px-6 text-center">
-        <p className="font-mono mb-8 text-[10px] tracking-[0.15em] text-[#8899AA] uppercase">
+        <p className="font-mono mb-8 text-[10px] tracking-[0.15em] text-[#B8A882] uppercase">
           Our vision
         </p>
 
@@ -156,8 +156,8 @@ export function Vision() {
 
         {reduced ? (
           <>
-            <div className="mx-auto mt-10 h-px w-full max-w-md bg-[#2D7DD2]" />
-            <p className="font-mono mt-10 text-sm text-[#8899AA]">
+            <div className="mx-auto mt-10 h-px w-full max-w-md bg-[#D4AF37]" />
+            <p className="font-mono mt-10 text-sm text-[#B8A882]">
               — Arthur Chukwurah, Founder &amp; CEO
             </p>
           </>
@@ -166,12 +166,12 @@ export function Vision() {
             <ScrollRevealDivider
               progress={scrollYProgress}
               range={stepRange(sequence.length)}
-              className="mx-auto mt-10 h-px w-full max-w-md origin-center bg-[#2D7DD2]"
+              className="mx-auto mt-10 h-px w-full max-w-md origin-center bg-[#D4AF37]"
             />
             <ScrollRevealAttribution
               progress={scrollYProgress}
               range={attributionRange(sequence.length)}
-              className="font-mono mt-10 text-sm text-[#8899AA]"
+              className="font-mono mt-10 text-sm text-[#B8A882]"
             >
               — Arthur Chukwurah, Founder &amp; CEO
             </ScrollRevealAttribution>

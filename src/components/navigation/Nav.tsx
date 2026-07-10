@@ -45,11 +45,11 @@ export function Nav() {
               <li key={link.href}>
                 <a
                   href={link.href}
-                  className="group font-body relative text-[13px] text-[#8899AA] transition-colors hover:text-white"
+                  className="group font-body relative text-[13px] text-[#B8A882] transition-colors hover:text-white"
                   data-cursor-label="View"
                 >
                   {link.label}
-                  <span className="absolute -bottom-1 left-0 h-0.5 w-0 bg-[#2D7DD2] transition-all duration-200 group-hover:w-full" />
+                  <span className="absolute -bottom-1 left-0 h-0.5 w-0 bg-[#D4AF37] transition-all duration-200 group-hover:w-full" />
                 </a>
               </li>
             ))}
@@ -57,7 +57,7 @@ export function Nav() {
 
           <a
             href={contactMailto()}
-            className="font-body hidden rounded-full border border-[#2D7DD2] px-5 py-2.5 text-[13px] text-[#2D7DD2] transition-all hover:bg-[#2D7DD2] hover:text-white hover:shadow-[0_0_20px_rgba(45,125,210,0.4)] md:inline-block"
+            className="font-body hidden rounded-full border border-[#D4AF37] px-5 py-2.5 text-[13px] text-[#D4AF37] transition-all hover:bg-[#D4AF37] hover:text-white hover:shadow-[0_0_20px_rgba(212,175,55,0.4)] md:inline-block"
             data-cursor-label="Contact"
           >
             Get in Touch

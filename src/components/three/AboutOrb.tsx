@@ -46,8 +46,8 @@ function MorphingOrb() {
       <mesh ref={mesh}>
         {geometry}
         <meshStandardMaterial
-          color="#2D7DD2"
-          emissive="#2D7DD2"
+          color="#D4AF37"
+          emissive="#D4AF37"
           emissiveIntensity={0.4}
           wireframe
           transparent
@@ -61,7 +61,7 @@ function MorphingOrb() {
             position={[Math.cos((i / 4) * Math.PI * 2) * 2.8, Math.sin((i / 4) * Math.PI * 2) * 2.8, 0]}
           >
             <sphereGeometry args={[0.08, 8, 8]} />
-            <meshBasicMaterial color={i % 2 === 0 ? "#2D7DD2" : "#06D6A0"} />
+            <meshBasicMaterial color={i % 2 === 0 ? "#D4AF37" : "#E8C547"} />
           </mesh>
         ))}
       </group>
@@ -73,7 +73,7 @@ export function AboutOrb({ className = "" }: { className?: string }) {
   if (prefersReducedMotion()) {
     return (
       <div className={`flex h-full items-center justify-center ${className}`}>
-        <div className="h-48 w-48 rounded-full border border-[#2D7DD2]/40 bg-[#2D7DD2]/10" />
+        <div className="h-48 w-48 rounded-full border border-[#D4AF37]/40 bg-[#D4AF37]/10" />
       </div>
     );
   }
@@ -85,7 +85,7 @@ export function AboutOrb({ className = "" }: { className?: string }) {
         dpr={1}
       >
         <ambientLight intensity={0.3} />
-        <pointLight position={[5, 5, 5]} intensity={1} color="#2D7DD2" />
+        <pointLight position={[5, 5, 5]} intensity={1} color="#D4AF37" />
         <MorphingOrb />
       </Canvas>
     </div>

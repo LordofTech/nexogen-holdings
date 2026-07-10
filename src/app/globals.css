@@ -4,13 +4,15 @@
   --color-black: #000000;
   --color-surface: #0a0a0a;
   --color-surface-footer: #050505;
-  --color-border: #1a1a1a;
-  --color-blue: #2d7dd2;
-  --color-emerald: #06d6a0;
-  --color-gold: #ffd700;
+  --color-border: #1f1a10;
+  --color-gold: #d4af37;
+  --color-gold-light: #f0d080;
+  --color-gold-dark: #b8941f;
+  --color-gold-bright: #e8c547;
   --color-text-primary: #ffffff;
-  --color-text-secondary: #8899aa;
-  --color-text-muted: #4a4a4a;
+  --color-text-secondary: #b8a882;
+  --color-text-muted: #6b6355;
+  --color-text-gold: #d4af37;
 
   --font-display: var(--font-cabinet), ui-sans-serif, system-ui, sans-serif;
   --font-body: var(--font-general), ui-sans-serif, system-ui, sans-serif;
@@ -68,7 +70,7 @@ body {
 }
 
 ::selection {
-  background: rgba(45, 125, 210, 0.35);
+  background: rgba(212, 175, 55, 0.35);
   color: #ffffff;
 }
 
@@ -85,14 +87,14 @@ body {
 }
 
 .gradient-text {
-  background: linear-gradient(135deg, #2d7dd2 0%, #06d6a0 100%);
+  background: linear-gradient(135deg, #f0d080 0%, #d4af37 50%, #b8941f 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
 .glass {
-  background: rgba(255, 255, 255, 0.03);
+  background: rgba(212, 175, 55, 0.03);
   backdrop-filter: blur(24px);
   -webkit-backdrop-filter: blur(24px);
 }
@@ -103,7 +105,7 @@ body {
 
 .card-surface {
   background: #0a0a0a;
-  border: 1px solid #1a1a1a;
+  border: 1px solid #1f1a10;
 }
 
 [data-cursor-hover] {

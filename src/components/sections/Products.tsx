@@ -12,8 +12,8 @@ const products: ProductData[] = [
     subtitle: "Cross-Border Fintech Wallet",
     description: "Direct international transfers — instant and seamless.",
     status: "live",
-    bg: "linear-gradient(135deg, #0A1628 0%, #0d1f3c 50%, #0A1628 100%)",
-    accent: "#2D7DD2",
+    bg: "linear-gradient(135deg, #0A0A0A 0%, #141008 50%, #0A0A0A 100%)",
+    accent: "#D4AF37",
     chips: ["80+ Countries", "Live FX Rates", "Virtual Cards"],
     link: "#contact",
     phone: true,
@@ -26,8 +26,8 @@ const products: ProductData[] = [
     description: "Democratising world-class education for every African student.",
     status: "coming",
     year: "2026",
-    bg: "linear-gradient(135deg, #061A10 0%, #0a2818 100%)",
-    accent: "#06D6A0",
+    bg: "linear-gradient(135deg, #0A0800 0%, #141008 100%)",
+    accent: "#D4AF37",
     icon: <GraduationIcon />,
   },
   {
@@ -37,8 +37,8 @@ const products: ProductData[] = [
     description: "Making government services accessible, transparent, and instant for citizens.",
     status: "coming",
     year: "2026",
-    bg: "linear-gradient(135deg, #0D0D1A 0%, #12122a 100%)",
-    accent: "#8899AA",
+    bg: "linear-gradient(135deg, #0A0A0A 0%, #141008 100%)",
+    accent: "#B8A882",
     icon: <ShieldIcon />,
   },
   {
@@ -67,7 +67,7 @@ const products: ProductData[] = [
 
 function GraduationIcon() {
   return (
-    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" stroke="#06D6A0" strokeWidth="1.5">
+    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" stroke="#E8C547" strokeWidth="1.5">
       <path d="M5 15 L20 8 L35 15 L20 22 Z" />
       <path d="M10 17 V28 C10 28 15 32 20 32 C25 32 30 28 30 28 V17" />
       <line x1="35" y1="15" x2="35" y2="26" />
@@ -77,7 +77,7 @@ function GraduationIcon() {
 
 function ShieldIcon() {
   return (
-    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" stroke="#8899AA" strokeWidth="1.5">
+    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" stroke="#B8A882" strokeWidth="1.5">
       <path d="M20 5 L32 10 V20 C32 28 20 35 20 35 C20 35 8 28 8 20 V10 Z" />
       <path d="M15 20 L18 23 L25 16" />
     </svg>
@@ -138,7 +138,7 @@ export function Products() {
   return (
     <section id="products" className="relative bg-black py-24">
       <div className="mx-auto mb-10 max-w-7xl px-6 lg:px-10">
-        <p className="font-mono text-[10px] tracking-[0.15em] text-[#2D7DD2] uppercase">Products</p>
+        <p className="font-mono text-[10px] tracking-[0.15em] text-[#D4AF37] uppercase">Products</p>
         <h2 className="font-display mt-3 text-4xl font-bold text-white md:text-5xl">
           What we build
         </h2>
@@ -149,7 +149,7 @@ export function Products() {
           ref={scrollerRef}
           data-lenis-prevent
           data-lenis-prevent-wheel
-          className="flex touch-pan-x gap-8 overflow-x-auto overscroll-x-contain px-6 pb-6 snap-x snap-mandatory scroll-smooth lg:px-[10vw] [scrollbar-width:thin] [scrollbar-color:#2D7DD2_#1A1A1A]"
+          className="flex touch-pan-x gap-8 overflow-x-auto overscroll-x-contain px-6 pb-6 snap-x snap-mandatory scroll-smooth lg:px-[10vw] [scrollbar-width:thin] [scrollbar-color:#D4AF37_#1A1A1A]"
           style={{ WebkitOverflowScrolling: "touch" }}
         >
           {products.map((product, i) => (
@@ -177,7 +177,7 @@ export function Products() {
                 }}
                 className={cn(
                   "h-1.5 rounded-full transition-all duration-300",
-                  i === activeIndex ? "w-8 bg-[#2D7DD2]" : "w-1.5 bg-[#1A1A1A]"
+                  i === activeIndex ? "w-8 bg-[#D4AF37]" : "w-1.5 bg-[#1A1A1A]"
                 )}
               />
             ))}
@@ -186,7 +186,7 @@ export function Products() {
             <button
               type="button"
               onClick={() => scrollByCard(-1)}
-              className="rounded-full border border-[#1A1A1A] px-4 py-2 text-xs text-[#8899AA] hover:border-[#2D7DD2] hover:text-white"
+              className="rounded-full border border-[#1A1A1A] px-4 py-2 text-xs text-[#B8A882] hover:border-[#D4AF37] hover:text-white"
               aria-label="Previous product"
             >
               ←
@@ -194,7 +194,7 @@ export function Products() {
             <button
               type="button"
               onClick={() => scrollByCard(1)}
-              className="rounded-full border border-[#1A1A1A] px-4 py-2 text-xs text-[#8899AA] hover:border-[#2D7DD2] hover:text-white"
+              className="rounded-full border border-[#1A1A1A] px-4 py-2 text-xs text-[#B8A882] hover:border-[#D4AF37] hover:text-white"
               aria-label="Next product"
             >
               →
@@ -203,7 +203,7 @@ export function Products() {
         </div>
       </div>
 
-      <p className="font-display mt-16 text-center text-2xl italic text-[#4A4A4A] transition-colors hover:text-white">
+      <p className="font-display mt-16 text-center text-2xl italic text-[#6B6355] transition-colors hover:text-white">
         More products in development. Nexogen never stops building.
       </p>
     </section>

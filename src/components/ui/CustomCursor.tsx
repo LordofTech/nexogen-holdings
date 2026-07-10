@@ -74,8 +74,8 @@ export function CustomCursor() {
         ringRef.current.style.width = `${sizeRef.current}px`;
         ringRef.current.style.height = `${sizeRef.current}px`;
         ringRef.current.style.background = c.hovering
-          ? "rgba(255,255,255,0.1)"
-          : "rgba(255,255,255,0)";
+          ? "rgba(212,175,55,0.12)"
+          : "rgba(212,175,55,0)";
       }
       if (glowRef.current) {
         const gx = lerp(parseFloat(glowRef.current.dataset.x ?? "0") || c.x, t.x, 0.08);
@@ -110,13 +110,13 @@ export function CustomCursor() {
         ref={glowRef}
         className="pointer-events-none fixed left-0 top-0 z-[9998] h-[200px] w-[200px] rounded-full"
         style={{
-          background: "radial-gradient(circle, rgba(255,255,255,0.03) 0%, transparent 70%)",
+          background: "radial-gradient(circle, rgba(212,175,55,0.06) 0%, transparent 70%)",
         }}
       />
       <div
         ref={ringRef}
         data-cursor-ring
-        className="pointer-events-none fixed left-0 top-0 z-[9999] flex items-center justify-center rounded-full border-[1.5px] border-white transition-[background] duration-300"
+        className="pointer-events-none fixed left-0 top-0 z-[9999] flex items-center justify-center rounded-full border-[1.5px] border-[#D4AF37]/60 transition-[background] duration-300"
         style={{
           width: 20,
           height: 20,

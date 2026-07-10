@@ -12,14 +12,14 @@ export function Footer() {
         <h2 className="font-display text-[clamp(2.5rem,7vw,5rem)] font-bold leading-tight text-white">
           Ready to build with us?
         </h2>
-        <p className="font-body mt-6 max-w-xl text-lg text-[#8899AA]">
+        <p className="font-body mt-6 max-w-xl text-lg text-[#B8A882]">
           Whether you&apos;re an investor, a partner, a talented engineer, or just curious — we
           want to hear from you.
         </p>
         <div className="mt-10 flex flex-wrap justify-center gap-4">
           <a
             href={contactMailto()}
-            className="font-body flex h-[52px] items-center rounded-full bg-[#2D7DD2] px-8 text-sm text-white"
+            className="font-body flex h-[52px] items-center rounded-full bg-[#D4AF37] px-8 text-sm text-white"
             data-cursor-label="Contact"
           >
             Get in Touch
@@ -32,7 +32,7 @@ export function Footer() {
             View TRVRSE
           </a>
         </div>
-        <div className="font-mono mt-16 flex flex-wrap justify-center gap-8 text-xs text-[#8899AA]">
+        <div className="font-mono mt-16 flex flex-wrap justify-center gap-8 text-xs text-[#B8A882]">
           <a href={contactMailto()} className="hover:text-white">
             {CONTACT_EMAIL}
           </a>
@@ -49,14 +49,14 @@ export function Footer() {
               <a
                 key={link}
                 href={`#${link.toLowerCase()}`}
-                className="font-body text-xs text-[#8899AA] transition-colors hover:text-white"
+                className="font-body text-xs text-[#B8A882] transition-colors hover:text-white"
               >
                 {link}
               </a>
             ))}
           </nav>
 
-          <p className="font-body text-xs text-[#4A4A4A]">
+          <p className="font-body text-xs text-[#6B6355]">
             © 2026 Nexogen Limited. All rights reserved.
           </p>
         </div>
@@ -66,7 +66,7 @@ export function Footer() {
             <a
               key={social}
               href="#"
-              className="font-mono text-[10px] tracking-[0.15em] text-[#8899AA] uppercase hover:text-white"
+              className="font-mono text-[10px] tracking-[0.15em] text-[#B8A882] uppercase hover:text-white"
               data-cursor-label="Open"
             >
               {social}

@@ -5,6 +5,8 @@ import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
 import { COMPANY_NAME } from "@/lib/site";
 
+const logoClass = "w-auto object-contain mix-blend-lighten";
+
 export function NexogenMark({
   className = "",
   height,
@@ -22,7 +24,7 @@ export function NexogenMark({
       alt={COMPANY_NAME}
       width={Math.round(h * 1.15)}
       height={h}
-      className={cn("w-auto object-contain", className)}
+      className={cn(logoClass, className)}
       style={{ height: h, width: "auto" }}
       priority
     />
@@ -57,7 +59,7 @@ export function NexogenMarkAnimated({
         alt={COMPANY_NAME}
         width={Math.round(h * 1.15)}
         height={h}
-        className={cn("w-auto object-contain", className)}
+        className={cn(logoClass, className)}
         style={{ height: h, width: "auto" }}
         priority
       />
