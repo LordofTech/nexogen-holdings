@@ -92,13 +92,12 @@ body {
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
-.logo-blend {
-  mix-blend-mode: screen;
-  filter: brightness(1.26) contrast(1.36) saturate(1.08)
-    drop-shadow(0 0 0.75px rgba(229, 203, 138, 0.5));
+.logo-tagline-sharp {
+  mix-blend-mode: normal;
+  filter: brightness(1.08) contrast(1.16) saturate(1.02)
+    drop-shadow(0 0 0.4px rgba(229, 203, 138, 0.28));
   opacity: 1;
-  image-rendering: -webkit-optimize-contrast;
-  image-rendering: crisp-edges;
+  image-rendering: auto;
 }
 
 .glass {

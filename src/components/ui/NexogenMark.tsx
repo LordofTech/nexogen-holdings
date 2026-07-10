@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
 import { COMPANY_NAME } from "@/lib/site";
 
-const logoClass = "w-auto object-contain logo-blend";
+const logoClass = "w-auto object-contain logo-tagline-sharp";
 
 export function NexogenMark({
   className = "",
