@@ -63,7 +63,7 @@ export function About() {
             className="font-body mt-6 space-y-4 text-base leading-relaxed text-[#8899AA]"
             delay={0.2}
           >
-            {`Nexogen Group Limited is a technology group born in Lagos, Nigeria. We exist to build the software that Africa's next generation deserves — and the world doesn't yet know it needs.
+            {`Nexogen Limited is a technology company born in Lagos, Nigeria. We exist to build the software that Africa's next generation deserves — and the world doesn't yet know it needs.
 We operate across five verticals: Financial Technology, Education Technology, Government Technology, Consumer Apps, and Hardware. Each product we build is independently powerful, but connected by one philosophy — technology should remove barriers, not create them.
 We are builders. We ship. We scale. We repeat.`}
           </TextReveal>

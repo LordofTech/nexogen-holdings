@@ -1,6 +1,7 @@
 "use client";
 
 import { NexogenMark } from "@/components/ui/NexogenMark";
+import { CONTACT_EMAIL, contactMailto } from "@/lib/site";
 
 const footerLinks = ["About", "Products", "Vision", "Pipeline", "Contact"];
 
@@ -17,7 +18,7 @@ export function Footer() {
         </p>
         <div className="mt-10 flex flex-wrap justify-center gap-4">
           <a
-            href="mailto:arthur@nexxogenn.com?subject=Enquiry%20from%20Nexogen%20Group%20website"
+            href={contactMailto()}
             className="font-body flex h-[52px] items-center rounded-full bg-[#2D7DD2] px-8 text-sm text-white"
             data-cursor-label="Contact"
           >
@@ -32,11 +33,8 @@ export function Footer() {
           </a>
         </div>
         <div className="font-mono mt-16 flex flex-wrap justify-center gap-8 text-xs text-[#8899AA]">
-          <a
-            href="mailto:arthur@nexxogenn.com?subject=Enquiry%20from%20Nexogen%20Group%20website"
-            className="hover:text-white"
-          >
-            arthur@nexxogenn.com
+          <a href={contactMailto()} className="hover:text-white">
+            {CONTACT_EMAIL}
           </a>
           <span>Lagos, Nigeria</span>
         </div>
@@ -44,10 +42,7 @@ export function Footer() {
 
       <footer className="border-t border-[#1A1A1A] bg-[#050505] py-10">
         <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-8 px-6 md:flex-row lg:px-10">
-          <div className="flex items-center gap-2">
-            <NexogenMark size={20} className="text-white" />
-            <span className="font-display text-xs tracking-[0.1em] text-white">NEXOGEN</span>
-          </div>
+          <NexogenMark height={36} />
 
           <nav className="flex flex-wrap justify-center gap-6">
             {footerLinks.map((link) => (
@@ -62,7 +57,7 @@ export function Footer() {
           </nav>
 
           <p className="font-body text-xs text-[#4A4A4A]">
-            © 2026 Nexogen Group Limited. All rights reserved.
+            © 2026 Nexogen Limited. All rights reserved.
           </p>
         </div>
 

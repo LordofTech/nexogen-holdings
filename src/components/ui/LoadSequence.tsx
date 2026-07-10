@@ -13,8 +13,6 @@ export function LoadSequence({
   onComplete?: () => void;
 }) {
   const [showLoader, setShowLoader] = useState(!prefersReducedMotion());
-  const [typed, setTyped] = useState("");
-  const word = "NEXOGEN";
 
   const dismiss = useCallback(() => {
     setShowLoader(false);
@@ -24,15 +22,6 @@ export function LoadSequence({
   useEffect(() => {
     if (!showLoader) return;
 
-    const typeStart = setTimeout(() => {
-      let i = 0;
-      const interval = setInterval(() => {
-        i++;
-        setTyped(word.slice(0, i));
-        if (i >= word.length) clearInterval(interval);
-      }, 45);
-    }, 400);
-
     const done = setTimeout(dismiss, 1100);
 
     const onScroll = () => dismiss();
@@ -41,7 +30,6 @@ export function LoadSequence({
     window.addEventListener("keydown", onScroll);
 
     return () => {
-      clearTimeout(typeStart);
       clearTimeout(done);
       window.removeEventListener("wheel", onScroll);
       window.removeEventListener("touchstart", onScroll);
@@ -59,23 +47,7 @@ export function LoadSequence({
             exit={{ opacity: 0 }}
             transition={{ duration: 0.25 }}
           >
-            <NexogenMarkAnimated size={64} />
-            <motion.p
-              className="font-display mt-6 text-xl font-bold tracking-[0.1em] text-white"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.35 }}
-            >
-              {typed}
-            </motion.p>
-            <motion.p
-              className="font-mono mt-2 text-[10px] tracking-[0.25em] text-[#8899AA] uppercase"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.55 }}
-            >
-              Group Limited
-            </motion.p>
+            <NexogenMarkAnimated height={140} />
             <button
               type="button"
               onClick={dismiss}

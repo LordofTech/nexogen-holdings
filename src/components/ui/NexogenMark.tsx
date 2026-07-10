@@ -1,66 +1,66 @@
-export function NexogenMark({ className = "", size = 24 }: { className?: string; size?: number }) {
+"use client";
+
+import Image from "next/image";
+import { motion } from "framer-motion";
+import { cn } from "@/lib/utils";
+import { COMPANY_NAME } from "@/lib/site";
+
+export function NexogenMark({
+  className = "",
+  height,
+  size,
+}: {
+  className?: string;
+  height?: number;
+  size?: number;
+}) {
+  const h = height ?? size ?? 36;
+
   return (
-    <svg
-      width={size}
-      height={size}
-      viewBox="0 0 48 48"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-      className={className}
-      aria-hidden="true"
-    >
-      <path
-        d="M8 40 L8 8 L22 8 L22 24 L26 8 L40 8 L26 28 L40 40 L26 40 L22 26 L22 40 Z"
-        stroke="currentColor"
-        strokeWidth="2"
-        strokeLinejoin="miter"
-        fill="none"
-      />
-    </svg>
+    <Image
+      src="/assets/nexogen-logo.png"
+      alt={COMPANY_NAME}
+      width={Math.round(h * 1.15)}
+      height={h}
+      className={cn("w-auto object-contain", className)}
+      style={{ height: h, width: "auto" }}
+      priority
+    />
   );
 }
 
 export function NexogenMarkAnimated({
   className = "",
-  size = 80,
+  height,
+  size,
   animate = true,
 }: {
   className?: string;
+  height?: number;
   size?: number;
   animate?: boolean;
 }) {
+  const h = height ?? size ?? 120;
+
+  if (!animate) {
+    return <NexogenMark height={h} className={className} />;
+  }
+
   return (
-    <svg
-      width={size}
-      height={size}
-      viewBox="0 0 48 48"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-      className={className}
-      aria-hidden="true"
+    <motion.div
+      initial={{ opacity: 0, scale: 0.92 }}
+      animate={{ opacity: 1, scale: 1 }}
+      transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
     >
-      <path
-        d="M8 40 L8 8 L22 8 L22 24 L26 8 L40 8 L26 28 L40 40 L26 40 L22 26 L22 40 Z"
-        stroke="white"
-        strokeWidth="1.5"
-        strokeLinejoin="miter"
-        fill="none"
-        pathLength={1}
-        style={
-          animate
-            ? {
-                strokeDasharray: 1,
-                strokeDashoffset: 1,
-                animation: "drawLogo 0.8s ease forwards",
-              }
-            : { strokeDasharray: 1, strokeDashoffset: 0 }
-        }
+      <Image
+        src="/assets/nexogen-logo.png"
+        alt={COMPANY_NAME}
+        width={Math.round(h * 1.15)}
+        height={h}
+        className={cn("w-auto object-contain", className)}
+        style={{ height: h, width: "auto" }}
+        priority
       />
-      <style>{`
-        @keyframes drawLogo {
-          to { stroke-dashoffset: 0; }
-        }
-      `}</style>
-    </svg>
+    </motion.div>
   );
 }

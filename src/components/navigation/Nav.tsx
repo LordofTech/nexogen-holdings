@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { NexogenMark } from "@/components/ui/NexogenMark";
+import { contactMailto } from "@/lib/site";
 import { cn } from "@/lib/utils";
 
 const links = [
@@ -35,11 +36,8 @@ export function Nav() {
         )}
       >
         <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-5 lg:px-10">
-          <a href="#" className="flex items-center gap-2.5" data-cursor-label="Home">
-            <NexogenMark size={24} className="text-white" />
-            <span className="font-display text-sm font-medium tracking-[0.1em] text-white">
-              NEXOGEN
-            </span>
+          <a href="#" className="flex items-center" data-cursor-label="Home">
+            <NexogenMark height={40} />
           </a>
 
           <ul className="hidden items-center gap-8 md:flex">
@@ -58,7 +56,7 @@ export function Nav() {
           </ul>
 
           <a
-            href="mailto:arthur@nexxogenn.com?subject=Enquiry%20from%20Nexogen%20Group%20website"
+            href={contactMailto()}
             className="font-body hidden rounded-full border border-[#2D7DD2] px-5 py-2.5 text-[13px] text-[#2D7DD2] transition-all hover:bg-[#2D7DD2] hover:text-white hover:shadow-[0_0_20px_rgba(45,125,210,0.4)] md:inline-block"
             data-cursor-label="Contact"
           >
