@@ -42,7 +42,7 @@ export function Footer() {
 
       <footer className="border-t border-[#1A1A1A] bg-[#050505] py-10">
         <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-8 px-6 md:flex-row lg:px-10">
-          <NexogenMark height={36} />
+          <NexogenMark height={44} />
 
           <nav className="flex flex-wrap justify-center gap-6">
             {footerLinks.map((link) => (
