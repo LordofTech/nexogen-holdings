@@ -20,7 +20,7 @@ export function NexogenMark({
 
   return (
     <Image
-      src="/assets/nexogen-logo.png"
+      src="/assets/nexogen-logo-4k.jpeg"
       alt={COMPANY_NAME}
       width={Math.round(h * 1.8)}
       height={h}
@@ -57,7 +57,7 @@ export function NexogenMarkAnimated({
       transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
     >
       <Image
-        src="/assets/nexogen-logo.png"
+        src="/assets/nexogen-logo-4k.jpeg"
         alt={COMPANY_NAME}
         width={Math.round(h * 1.8)}
         height={h}
