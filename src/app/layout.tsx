@@ -20,6 +20,30 @@ export const metadata: Metadata = {
     description: "We Don't Build Apps. We Build Futures.",
     type: "website",
   },
+  icons: {
+    icon: [
+      { url: "/branding/favicon.ico" },
+      { url: "/branding/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+      { url: "/branding/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+      {
+        url: "/branding/nexogen-favicon-512.png",
+        sizes: "512x512",
+        type: "image/png",
+      },
+      {
+        url: "/branding/nexogen-favicon-1024.png",
+        sizes: "1024x1024",
+        type: "image/png",
+      },
+      {
+        url: "/branding/nexogen-favicon-4096.png",
+        sizes: "4096x4096",
+        type: "image/png",
+      },
+    ],
+    shortcut: ["/branding/favicon.ico"],
+    apple: [{ url: "/branding/apple-touch-icon.png", sizes: "180x180" }],
+  },
 };
 
 export default function RootLayout({
