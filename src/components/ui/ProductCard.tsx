@@ -16,6 +16,7 @@ export type ProductData = {
   icon: React.ReactNode;
   chips?: string[];
   link?: string;
+  linkLabel?: string;
   phone?: boolean;
 };
 
@@ -101,7 +102,7 @@ export function ProductCard({
             className="group font-body text-sm text-white"
             data-cursor-label="Explore"
           >
-            Explore Product
+            {product.linkLabel ?? "Explore Product"}
             <span className="mt-1 block h-px w-0 bg-white transition-all duration-300 group-hover:w-full" />
           </a>
         ) : (
